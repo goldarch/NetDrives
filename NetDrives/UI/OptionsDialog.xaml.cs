@@ -70,14 +70,38 @@ namespace Hardcodet.NetDrives.UI
 
       var lang = cmbLanguage.SelectedItem as LocalizationManager.LanguageOption;
       var cultureName = lang == null ? "en-US" : lang.CultureName;
+      bool cultureChanged = !String.Equals(Settings.Default.UiCulture, cultureName, StringComparison.OrdinalIgnoreCase);
       Settings.Default.UiCulture = cultureName;
       Settings.Default.Save();
 
-      LocalizationManager.Instance.ApplyCulture(cultureName); // 立即刷新文本
+      LocalizationManager.Instance.ApplyCulture(cultureName);
       AppController.Instance.RefreshTrayMode();
       DialogResult = true;
+
+      // 部分文本（工具提示、托盘、Ribbon 等）只在创建时读取，重启程序才能完整切换语言
+      if (cultureChanged) RestartApplication();
     }
 
+
+    private static void RestartApplication()
+    {
+      try
+      {
+        string exe = System.Reflection.Assembly.GetEntryAssembly().Location;
+        // 延迟启动，等待当前实例释放单实例互斥体
+        var psi = new System.Diagnostics.ProcessStartInfo("cmd.exe",
+          "/c ping -n 3 127.0.0.1 >nul & start \"\" \"" + exe + "\"");
+        psi.CreateNoWindow = true;
+        psi.UseShellExecute = false;
+        psi.WorkingDirectory = System.IO.Path.GetDirectoryName(exe);
+        System.Diagnostics.Process.Start(psi);
+        AppController.Instance.CloseMainApplication(true);
+      }
+      catch (Exception ex)
+      {
+        AppUtil.LogException(ex);
+      }
+    }
 
     /// <summary>
     /// Closes the dialog without updating the settings.
