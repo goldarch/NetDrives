@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D2A40F6-5570-42C5-B16A-ECDD6F2A705A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Platform_Tests</RootNamespace>
+    <AssemblyName>Platform Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=1.4.2.530, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.AutofacAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\CommonServiceLocator.AutofacAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Commons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Hardcodet.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Util.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Hardcodet.XItems, Version=1.0.0.21203, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Hardcodet.XItems.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.0.9015, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework.extensions, Version=2.5.0.9015, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\nunit.framework.extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.0.9015, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionInfo Tests\Given_ConnectionInfo_When_Refreshing_Connections.cs" />
+    <Compile Include="ConnectionMonitor Tests\Given_ConnectionMonitor_When_Connections_Are_Changing.cs" />
+    <Compile Include="ConnectionUtil Tests\Given_ConnectionUtil_When_Querying_Connections.cs" />
+    <Compile Include="Managed Shares Tests\Given_Connected_Share_When_Underlying_Connection_Changes.cs" />
+    <Compile Include="Managed Shares Tests\Given_Share_Credentials.cs" />
+    <Compile Include="Managed Shares Tests\Given_Share_When_Connecting.cs" />
+    <Compile Include="Managed Shares Tests\Given_Share_When_Logging_Status_Changes.cs" />
+    <Compile Include="NetworkAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShareManager Tests\Given_ShareManager_When_Disconnecting_Shares.cs" />
+    <Compile Include="ShareManager Tests\Given_ShareManager_When_Updating_Unconfigured_Connections.cs" />
+    <Compile Include="ShareManager Tests\Given_Share_Manager_When_Adding_Or_Removing_Shares.cs" />
+    <Compile Include="ShareManager Tests\Given_Share_Manager_When_Initializing.cs" />
+    <Compile Include="ShareStore Tests\Given_ShareStore_When_Registering_Shares.cs" />
+    <Compile Include="UncShareGuard.cs" />
+    <Compile Include="DummyTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShareConfiguration Tests\Given_NetworkUtil_When_Creating_Network_Share.cs" />
+    <Compile Include="ShareConfiguration Tests\Given_NetworkUtil_When_Evaluating_Drive_Letters.cs" />
+    <Compile Include="ShareConfiguration Tests\Given_NetworkUtil_When_Removing_Share.cs" />
+    <Compile Include="ShareConfiguration Tests\Given_Network_Util_Is_Handling_Connection_Without_Mapping_Drive_Letter.cs" />
+    <Compile Include="ShareConfiguration Tests\Given_Network_Util_When_Checking_Status.cs" />
+    <Compile Include="ShareConfiguration Tests\ShareTestBase.cs" />
+    <Compile Include="DriveShareGuard.cs" />
+    <Compile Include="ShareStore Tests\Given_ShareStore_When_Reading_Configuration.cs" />
+    <Compile Include="TestUtil.cs" />
+    <Compile Include="Util Tests\Given_Sensitive_Data_When_Using_Encryption.cs" />
+    <Compile Include="WMI Tests\Given_InstrumentationObserver_When_Registering_Query.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NetDrives.Platform\NetDrives.Platform.csproj">
+      <Project>{4E9E0D00-ECA2-4AE3-8777-38E9B1772A92}</Project>
+      <Name>NetDrives.Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ShareConfiguration.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

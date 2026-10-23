@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hardcodet.NetDrives.Platform.Interop.Instrumentation.WmiClassObserver">
+    <Position X="1.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAQAAAAACAEAACAAIAAQACAAAAAAA=</HashCode>
+      <FileName>Interop\Instrumentation\WmiClassObserver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hardcodet.NetDrives.Platform.Interop.Instrumentation.WmiEventArgs">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAIAAAAAAAAAIAAAAAAAAAAgAAAACAA=</HashCode>
+      <FileName>Interop\Instrumentation\WmiEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Hardcodet.NetDrives.Platform.Interop.Instrumentation.WmiEventClass">
+    <Position X="4.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAQCA=</HashCode>
+      <FileName>Interop\Instrumentation\WmiEventClass.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

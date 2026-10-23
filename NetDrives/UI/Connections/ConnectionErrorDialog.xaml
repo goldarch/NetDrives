@@ -1,0 +1,159 @@
+﻿<Window
+  x:Class="Hardcodet.NetDrives.UI.Connections.ConnectionErrorDialog"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions"
+  xmlns:Converters="clr-namespace:Hardcodet.NetDrives.Shared.Converters"
+  Height="390"
+  Width="551"
+  Title="{ext:Resource ConnectionError_Window_Title}"
+  Style="{DynamicResource DialogWindow}"
+  WindowStartupLocation="CenterOwner">
+
+  <Grid>
+    <TextBlock
+      Margin="10,14,10,0"
+      Style="{DynamicResource TitleLabel}"
+      VerticalAlignment="Top"
+      TextWrapping="Wrap"
+      x:Name="txtDialogTitle">
+      <Run Text="{ext:Resource ConnectionError_Title_Prefix}" />
+      <InlineUIContainer>
+        <TextBlock Text="{Binding Path=Configuration.Name}" TextWrapping="Wrap" />
+      </InlineUIContainer>
+      <Run Text="{ext:Resource ConnectionError_Title_Suffix}" />
+    </TextBlock>
+
+    <TextBlock
+      Margin="40,0,0,115"
+      TextWrapping="Wrap"
+      HorizontalAlignment="Left"
+      Style="{DynamicResource DefaultLabel}"
+      Width="Auto"
+      Height="23"
+      VerticalAlignment="Bottom"
+      Text="{ext:Resource ConnectionError_Action_Retry}" />
+
+    <Button
+      x:Name="btnCancel"
+      Click="btnCancel_Click"
+      HorizontalAlignment="Right"
+      Margin="0,0,10,10"
+      Width="90"
+      Content="{ext:Resource Common_Cancel}"
+      VerticalAlignment="Bottom"
+      Height="21.68"
+      TabIndex="2" />
+
+    <Button
+      x:Name="btnConnect"
+      Click="btnConnect_Click"
+      Margin="0,0,110,10"
+      Content="{ext:Resource Grid_Action_Connect}"
+      VerticalAlignment="Bottom"
+      Height="21.68"
+      IsDefault="True"
+      Width="90"
+      HorizontalAlignment="Right"
+      TabIndex="1" />
+
+    <RadioButton
+      HorizontalAlignment="Left"
+      Margin="10,0,0,112"
+      Width="20"
+      Content=""
+      IsChecked="True"
+      Height="23"
+      VerticalAlignment="Bottom"
+      x:Name="rbRetry"
+      TabIndex="3" />
+
+    <TextBlock
+      Margin="40,0,0,82"
+      TextWrapping="Wrap"
+      HorizontalAlignment="Left"
+      Style="{DynamicResource DefaultLabel}"
+      Width="Auto"
+      Height="23"
+      VerticalAlignment="Bottom"
+      Text="{ext:Resource ConnectionError_Action_Reconfigure}" />
+
+    <RadioButton
+      HorizontalAlignment="Left"
+      Margin="10,0,0,79"
+      Width="20"
+      Content=""
+      VerticalAlignment="Bottom"
+      Height="23"
+      x:Name="rbReconfigure"
+      TabIndex="4" />
+
+    <TextBlock
+      Margin="40,0,0,49"
+      TextWrapping="Wrap"
+      HorizontalAlignment="Left"
+      Style="{DynamicResource DefaultLabel}"
+      Width="Auto"
+      VerticalAlignment="Bottom"
+      Height="23"
+      Text="{ext:Resource ConnectionError_Action_ChangeLogin}" />
+
+    <RadioButton
+      HorizontalAlignment="Left"
+      Margin="10,0,0,46"
+      Width="20"
+      Content=""
+      VerticalAlignment="Bottom"
+      Height="23"
+      x:Name="rbChangeLogin"
+      TabIndex="5" />
+
+    <TextBlock
+      Margin="10,0,0,148"
+      TextWrapping="Wrap"
+      HorizontalAlignment="Left"
+      Style="{DynamicResource DefaultLabel}"
+      Width="Auto"
+      Text="{ext:Resource ConnectionError_Question}"
+      Height="24"
+      VerticalAlignment="Bottom" />
+
+    <TextBlock
+      Margin="10,45.28,10,0"
+      VerticalAlignment="Top"
+      TextWrapping="Wrap"
+      Style="{DynamicResource DefaultLabel}"
+      x:Name="txtErrorInfo"
+      Text="{Binding Path=ConnectionResult, Converter={Converters:EnumToDescriptionConverter}}" />
+
+    <Path
+      Fill="#FFFFFFFF"
+      Stretch="Fill"
+      Margin="10,181,10,0"
+      VerticalAlignment="Top"
+      Height="1"
+      Data="M11,209 L405.01142,209"
+      Stroke="{DynamicResource SeparatorStroke}" />
+
+    <Image
+      HorizontalAlignment="Right"
+      Margin="0,10,10,0"
+      VerticalAlignment="Top"
+      Width="72"
+      Height="72"
+      Opacity="0.36"
+      Source="..\..\Shared\Images\Error.png"
+      Stretch="Fill"
+      RenderTransformOrigin="0.5,0.5"
+      x:Name="image">
+      <Image.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="32.218"/>
+          <TranslateTransform X="0" Y="0"/>
+        </TransformGroup>
+      </Image.RenderTransform>
+    </Image>
+  </Grid>
+</Window>

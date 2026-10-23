@@ -1,0 +1,164 @@
+﻿    /// <summary>
+    /// Gets the full path of the application's log file.
+    /// </summary>
+    public static string LogFile
+    {
+      get
+      {
+        //enable for quick diagnostics
+        //return FileUtil.GetAbsolutePath(LogFileName);
+
+        //C:\Users\goldarch\AppData\Local\NetDrives
+
+        var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        path = Path.Combine(path, LocalDataFolderName);
+        return Path.Combine(path, LogFileName);
+      }
+    }
+
+
+    【说明】
+    在现代 Windows 系统（Windows 7 / 10 / 11 / Server 2016 等）中，Environment.SpecialFolder.LocalApplicationData 默认指向的位置是：
+
+C:\Users\<你的用户名>\AppData\Local
+
+关键特性说明：
+默认隐藏： AppData 文件夹在 Windows 中默认是隐藏的。如果你想在文件资源管理器中直接打开它，最快捷的方法是在地址栏输入 %localappdata% 并回车。
+
+应用场景： 它用于存储特定于当前用户且不需要在域（Active Directory）网络中漫游同步的应用程序数据。通常用于存放体积较大、仅依赖于当前物理机器的数据，例如本地缓存、大型配置文件或日志文件。
+
+对比： 如果你需要保存用户在域环境中登录任何机器都应该能读取到的配置，应该使用 SpecialFolder.ApplicationData（对应 AppData\Roaming）。
+
+
+
+    E:\WIN相关\017.文件处理\【集合】共享文件夹相关\【非常好】NetDrives（hardcodet.net）\NetDrives 1.0.2\Implementation\Trunk\NetDrives\App.xaml.cs
+
+    对log限制多，编译环境与debug下都不使用log文件，所以，正式使用一定要使用release才能使用log文件，debug下使用console输出日志，方便调试。
+
+        /// <summary>
+    /// Inits the IOC container.
+    /// </summary>
+    private void CreateContainer()
+    {
+      var builder = new ContainerBuilder();
+
+      //register single logger instance
+      ILogger logger;
+      if (AppUtil.IsDesignMode)
+      {
+        logger = new NullLogger();
+      }
+      else
+      {
+      #if (DEBUG)
+        logger = new ConsoleLogger();
+      #else
+        logger = BitFactoryLogger.CreateSingleFileLogger(AppUtil.LogFile);
+      #endif
+      }
+
+      builder.Register(logger).As<ILogger>();
+
+
+      ======================
+
+                  if (AppUtil.IsDesignMode)
+            {
+                logger = new NullLogger();
+            }
+            else
+            {
+                //dx 2026.08.10 不区分debug和release，统一使用单文件日志
+                //#if (DEBUG)
+                //  logger = new ConsoleLogger();
+                //#else
+                //  logger = BitFactoryLogger.CreateSingleFileLogger(AppUtil.LogFile);
+                //#endif
+
+                logger = BitFactoryLogger.CreateSingleFileLogger(AppUtil.LogFile);
+            }
+
+      ========================================================================================================
+
+      在C#桌面程序（如WinForms或WPF，项目类型为“Windows 应用程序”）中，直接双击运行 exe 时，并没有分配控制台窗口。此时 `Console.Out.WriteLine` 的输出**会被操作系统直接丢弃（进入虚无）**，程序不会报错，但你也看不到任何输出。
+
+如果你想看到这些开源代码里的 `Console` 输出，有以下几种常用方法：
+
+### 方法一：通过命令行重定向到文件（免改代码）
+
+这是最简单的方法，不需要重新编译代码。虽然在 cmd 中直接运行该 exe 不会在屏幕上打印内容，但你可以将其输出流重定向到文本文件中。
+
+1. 打开命令提示符 (CMD) 或 PowerShell。
+2. 切换到 exe 所在的目录。
+3. 输入以下命令运行程序：
+```cmd
+YourProgram.exe > output.txt 2>&1
+
+```
+
+
+4. 正常操作你的程序，关闭后，打开目录下的 `output.txt`，里面就会包含所有的 `Console.Out.WriteLine` 输出。
+
+### 方法二：在 Visual Studio 的“输出”窗口查看
+
+如果你正在使用 Visual Studio 调试这个开源项目：
+
+1. 直接按 `F5` 启动调试。
+2. 打开顶部菜单的 **视图 (View)** -> **输出 (Output)**。
+3. 在“输出”窗口的“显示输出来源”下拉框中选择 **调试 (Debug)**，你通常可以在这里看到 `Console` 的打印信息。
+
+### 方法三：修改代码，强行弹出控制台窗口
+
+如果你希望双击 exe 时能像控制台程序一样弹出一个黑框显示日志，可以通过调用 Windows API 强制分配一个控制台。
+
+在程序的启动入口处（比如 `Program.cs` 的 `Main` 方法或主窗体的构造函数）加入以下代码：
+
+```csharp
+using System.Runtime.InteropServices;
+
+internal class Program
+{
+    // 引入 Windows API
+    [DllImport("kernel32.dll", SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    static extern bool AllocConsole();
+
+    [STAThread]
+    static void Main()
+    {
+        // 强制分配并显示控制台窗口
+        AllocConsole(); 
+        
+        Console.WriteLine("控制台已启动，你可以看到输出啦！");
+
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
+    }
+}
+
+```
+
+### 方法四：修改代码，将 Console 重定向到日志文件
+
+如果你想把这些输出保存下来，可以在程序启动时，通过代码改变 `Console.Out` 的输出流方向。
+
+```csharp
+using System.IO;
+
+static void Main()
+{
+    // 创建一个写入流，true 表示追加模式
+    StreamWriter sw = new StreamWriter("AppLog.txt", true);
+    sw.AutoFlush = true; // 确保实时写入磁盘
+    
+    // 将 Console 的输出重定向到这个文件
+    Console.SetOut(sw);
+    Console.SetError(sw); // 顺便把错误流也重定向
+
+    Console.WriteLine("这条信息会被写进 AppLog.txt 中，而不是屏幕上。");
+
+    // 启动你的 GUI 窗体...
+}
+
+```

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration Version="1.0.0">
+
+  <Shares>
+
+    <Share Id="LocalSecured" Name="Secured Local Share" DriveLetter="Q" VolumeLabel="MyDrive_Q">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9fXuVamyi0OMNA0PnI5pGgAAAAACAAAAAAADZgAAqAAAABAAAADPXmBbQOJdY+7zNx4i+t5zAAAAAASAAACgAAAAEAAAALNOBT/tD0C5lIrfLjidQ3wYAAAAUgLW7zo4t0o6jIixsk88EYl6IYN9k4HGFAAAADeuSrBzCTjyNO5PFyETM87aj8rM</Password>
+      <NetworkLocation>\\127.0.0.1\_ShareSharp_Test</NetworkLocation>
+    </Share>
+
+    <Share Id="LocalUnsecured" Name="Unsecured Local Share" DriveLetter="R" VolumeLabel="MyDrive_R">
+      <UserName />
+      <Password />
+      <NetworkLocation>\\127.0.0.1\_ShareSharp_Test</NetworkLocation>
+    </Share>
+    
+    <Share Id="RemoteSecured" Name="RemoteSecured" DriveLetter="K">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30\public</NetworkLocation>
+    </Share>
+
+    <Share Id="RemoteUnsecured" Name="RemoteUnsecured" DriveLetter="L">
+      <UserName />
+      <Password />
+      <NetworkLocation>\\10.0.0.30\temp</NetworkLocation>
+    </Share>
+
+    
+
+    <Share Id="UncPublicSecuredUser1" Name="UncPublicSecuredUser1">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30\public</NetworkLocation>
+    </Share>
+
+    <Share Id="UncPublicSecuredUser2" Name="UncPublicSecuredUser2">
+      <UserName>wanda</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAD54LsUddCkkKbNcX6lE3qWAAAAAASAAACgAAAAEAAAAEY2ofFteWs+A5ElkFtd/n8gAAAA1O8yUvvqNYawTDnKRK3n66mfP/9pJZtcxQSpHgIC6okUAAAAoye1iTb1r+zh+kd7UQD4OguVa0o=</Password>
+      <NetworkLocation>\\10.0.0.30\public</NetworkLocation>
+    </Share>
+
+    <Share Id="UncPublicUnsecured" Name="UncPublicUnsecured">
+      <UserName />
+      <Password />
+      <NetworkLocation>\\10.0.0.30\public</NetworkLocation>
+    </Share>
+
+
+
+    <Share Id="UncTempSecuredUser1" Name="UncTempSecuredUser1">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30\temp</NetworkLocation>
+    </Share>
+
+    <Share Id="UncTempSecuredUser2" Name="UncTempSecuredUser2">
+      <UserName>wanda</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAD54LsUddCkkKbNcX6lE3qWAAAAAASAAACgAAAAEAAAAEY2ofFteWs+A5ElkFtd/n8gAAAA1O8yUvvqNYawTDnKRK3n66mfP/9pJZtcxQSpHgIC6okUAAAAoye1iTb1r+zh+kd7UQD4OguVa0o=</Password>
+      <NetworkLocation>\\10.0.0.30\temp</NetworkLocation>
+    </Share>
+
+    <Share Id="UncTempUnsecured" Name="UncTempUnsecured">
+      <UserName />
+      <Password />
+      <NetworkLocation>\\10.0.0.30\temp</NetworkLocation>
+    </Share>
+    
+    
+  </Shares>
+
+
+  <ApplicationSettings>
+    
+  </ApplicationSettings>
+  
+</Configuration>

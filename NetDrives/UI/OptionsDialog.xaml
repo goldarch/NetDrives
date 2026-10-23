@@ -1,0 +1,67 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions"
+	x:Class="Hardcodet.NetDrives.UI.OptionsDialog"
+	x:Name="Window"
+	Title="{ext:Resource Options_Window_Title}"
+	Width="520"
+	Height="430"
+	Style="{DynamicResource DialogWindow}"
+	WindowStartupLocation="CenterOwner"
+	Icon="..\Shared\Images\Options.png">
+
+	<Grid x:Name="LayoutRoot" Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="16"/>
+
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="16"/>
+
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock Grid.Row="0" Style="{DynamicResource TitleLabel}" Text="{ext:Resource Options_AutoStart_Title}"/>
+		<TextBlock Grid.Row="1" Margin="0,8,0,8" Style="{DynamicResource DefaultLabel}" TextWrapping="Wrap"
+		           Text="{ext:Resource Options_AutoStart_Description}"/>
+		<CheckBox Grid.Row="2" x:Name="chkAutoStart">
+			<TextBlock Style="{DynamicResource DefaultLabel}" TextWrapping="Wrap" Text="{ext:Resource Options_AutoStart_Checkbox}"/>
+		</CheckBox>
+
+		<Border Grid.Row="3" Margin="0,8,0,8" BorderBrush="{DynamicResource SeparatorStroke}" BorderThickness="0,1,0,0"/>
+
+		<TextBlock Grid.Row="4" Style="{DynamicResource TitleLabel}" Text="{ext:Resource Options_Tray_Title}"/>
+		<CheckBox Grid.Row="5" x:Name="chkShowSystemTray" Margin="0,8,0,8" Checked="OnTrayOptionChanged" Unchecked="OnTrayOptionChanged">
+			<TextBlock Style="{DynamicResource DefaultLabel}" TextWrapping="Wrap" Text="{ext:Resource Options_Tray_ShowIcon}"/>
+		</CheckBox>
+		<CheckBox Grid.Row="6" x:Name="chkCloseToTray" Margin="20,0,0,0">
+			<TextBlock Style="{DynamicResource DefaultLabel}" TextWrapping="Wrap" Text="{ext:Resource Options_Tray_CloseBehavior}"/>
+		</CheckBox>
+
+		<Border Grid.Row="7" Margin="0,8,0,8" BorderBrush="{DynamicResource SeparatorStroke}" BorderThickness="0,1,0,0"/>
+
+		<TextBlock Grid.Row="8" Style="{DynamicResource TitleLabel}" Text="{ext:Resource Options_Language_Title}"/>
+		<StackPanel Grid.Row="9" Margin="0,8,0,0">
+			<TextBlock Style="{DynamicResource DefaultLabel}" TextWrapping="Wrap" Text="{ext:Resource Options_Language_Description}"/>
+			<ComboBox x:Name="cmbLanguage" Margin="0,8,0,0" MinWidth="220" Height="24" HorizontalAlignment="Left" DisplayMemberPath="DisplayName"/>
+		</StackPanel>
+
+		<Grid Grid.Row="10"/>
+
+		<StackPanel Grid.Row="11" Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button x:Name="btnOk" Width="90" Height="24" Margin="0,0,10,0" IsDefault="True"
+			        Content="{ext:Resource Common_OK}" Click="CommitChanges"/>
+			<Button x:Name="btnCancel" Width="90" Height="24"
+			        Content="{ext:Resource Common_Cancel}" Click="Cancel"/>
+		</StackPanel>
+	</Grid>
+</Window>

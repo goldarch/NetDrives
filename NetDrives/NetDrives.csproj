@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F0C263C-2738-47A3-B58E-0687ABD42F04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hardcodet.NetDrives</RootNamespace>
+    <AssemblyName>NetDrives</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>NetDrives.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\Build\Debug\NetDrives.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Reference Include="Autofac, Version=1.4.2.530, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="BitFactory.Logging, Version=1.4.1.0, Culture=neutral, PublicKeyToken=de68848483a294a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\BitFactory.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.AutofacAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\CommonServiceLocator.AutofacAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Commons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Hardcodet.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Util.Dependencies, Version=1.0.2.34685, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Hardcodet.Util.Dependencies.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Util.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Hardcodet.Util.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Util.Logging.BitFactoryFacade, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Hardcodet.Util.Logging.BitFactoryFacade.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.XItems, Version=1.0.0.21203, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Hardcodet.XItems.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Editors.v18.1, Version=18.1.20181.82, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.Ribbon.v18.1, Version=18.1.20181.82, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.v18.1, Version=18.1.20181.82, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Page Include="Shared\Brushes\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shared\Styles\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shared\Styles\CommonControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shared\Styles\GridStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\OptionsDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ShareConfigurationDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="UI\OptionsDialog.xaml.cs">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShareConfigurationDialog.xaml.cs">
+      <DependentUpon>ShareConfigurationDialog.xaml</DependentUpon>
+    </Compile>
+    <Resource Include="Shared\Images\Error.png" />
+    <Resource Include="Shared\Images\Menus\OrganizeSharesSmall.png" />
+    <Resource Include="Shared\Images\Menus\OrganizeSharesBig.png" />
+    <Resource Include="Shared\Images\NetDrivesMedium.png" />
+    <Resource Include="Shared\Images\WarningSmall.png" />
+    <Resource Include="Shared\Images\Login.png" />
+    <Resource Include="Shared\Images\Menus\CheckForUpdateBig.png" />
+    <Resource Include="Shared\Images\Menus\CheckForUpdateSmall.png" />
+    <Resource Include="Shared\Images\NetDrives.png" />
+    <Resource Include="Shared\Images\Network.png" />
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Shared\Menus\MenuResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shared\Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shared\Styles\MenuStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shared\Styles\Sliders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Common\AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Common\InfoPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Common\ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Connections\SuggestAutoStartDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Connections\ConnectionErrorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Connections\DisconnectionErrorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Connections\LoginDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Connections\StatusLogDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ConnectWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ShareOrganizerDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SystemTray\BalloonPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\SystemTray\SysTrayPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SystemTray\SysTrayToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfo.Shared.cs">
+      <Link>Properties\AssemblyInfo.Shared.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Commands\CloseUnmanagedConnectionCommand.cs" />
+    <Compile Include="Shared\Commands\CreateManagedConnectionCommand.cs" />
+    <Compile Include="Shared\Commands\SystemConnectionCommand.cs" />
+    <Compile Include="Shared\Commands\CommandExtension.cs" />
+    <Compile Include="Shared\Commands\AddNetLocationCommand.cs" />
+    <Compile Include="Shared\Commands\ProcessCommand.cs" />
+    <Compile Include="Shared\Commands\ShowHelperDialogsCommand.cs" />
+    <Compile Include="Shared\Commands\CommandBase.cs" />
+    <Compile Include="Shared\Commands\ConnectionActionCommand.cs" />
+    <Compile Include="Shared\Commands\ApplicationCommand.cs" />
+    <Compile Include="Shared\Commands\ShowShareLogCommand.cs" />
+    <Compile Include="Shared\Commands\EditNetLocationCommand.cs" />
+    <Compile Include="Shared\Commands\RemoveNetLocationCommand.cs" />
+    <Compile Include="Shared\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Shared\Converters\ConnectionStatusToImageConverter.cs" />
+    <Compile Include="Shared\Converters\AutoConnectToImageConverter.cs" />
+    <Compile Include="Shared\Converters\SummaryStatusConverter.cs" />
+    <Compile Include="Shared\Converters\EnumToDescriptionConverter.cs" />
+    <Compile Include="Shared\Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="Shared\Converters\DriveLetterConverter.cs" />
+    <Compile Include="Shared\Converters\StringToUpperConverter.cs" />
+    <Compile Include="Shared\MarkupExtensions\Resource.cs" />
+    <Compile Include="Shared\MarkupExtensions\RibbonInfo.cs" />
+    <Compile Include="UI\Common\AboutDialog.xaml.cs">
+      <DependentUpon>AboutDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Common\InfoPopup.xaml.cs">
+      <DependentUpon>InfoPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Common\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\MarkupExtensions\Info.cs" />
+    <Compile Include="UI\Connections\SuggestAutoStartDialog.xaml.cs">
+      <DependentUpon>SuggestAutoStartDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Connections\ConnectionErrorDialog.xaml.cs">
+      <DependentUpon>ConnectionErrorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Connections\DisconnectionErrorDialog.xaml.cs">
+      <DependentUpon>DisconnectionErrorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Connections\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Connections\StatusLogDialog.xaml.cs">
+      <DependentUpon>StatusLogDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConnectWindow.xaml.cs">
+      <DependentUpon>ConnectWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShareOrganizerDialog.xaml.cs">
+      <DependentUpon>ShareOrganizerDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemTray\BalloonPopup.xaml.cs">
+      <DependentUpon>BalloonPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemTray\SysTrayPopup.xaml.cs">
+      <DependentUpon>SysTrayPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemTray\SysTrayToolTip.xaml.cs">
+      <DependentUpon>SysTrayToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\AppUtil.cs" />
+    <Compile Include="Util\Attach.cs" />
+    <Compile Include="Util\AutoStart.cs" />
+    <Compile Include="Util\Dialogs.cs" />
+    <Compile Include="Util\Loc.cs" />
+    <Compile Include="Util\LocalizationManager.cs" />
+    <Compile Include="ViewModel\ConfigurationWrapper.cs" />
+    <Compile Include="ViewModel\Connections\ConnectionUtil.cs" />
+    <Compile Include="Util\UIHelpers.cs" />
+    <Compile Include="ViewModel\AppController.cs" />
+    <Compile Include="ViewModel\Connections\ReconnectionStrategy.cs" />
+    <Compile Include="ViewModel\Connections\ShareUtil.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Status\ConnectionError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Status\Connected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Status\Disconnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Status\_copyright.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Menus\AddConnectionBig.png" />
+    <Resource Include="Shared\Images\Menus\AddConnectionSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Menus\ConnectBig.png" />
+    <Resource Include="Shared\Images\Menus\ConnectSmall.png" />
+    <Resource Include="Shared\Images\Menus\DisconnectBig.png" />
+    <Resource Include="Shared\Images\Menus\DisconnectSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Menus\EditConnectionBig.png" />
+    <Resource Include="Shared\Images\Menus\EditConnectionSmall.png" />
+    <Resource Include="Shared\Images\Menus\RemoveConnectionBig.png" />
+    <Resource Include="Shared\Images\Menus\RemoveConnectionSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Menus\BrowseLocationBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Menus\BrowseLocationSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NetDrives.ico" />
+    <None Include="Settings\ShareConfiguration.xml">
+    </None>
+    <Resource Include="Shared\Images\Menus\ListSharesOnConsoleBig.png" />
+    <Resource Include="Shared\Images\Menus\ListSharesOnConsoleSmall.png" />
+    <Resource Include="Shared\Images\Menus\RemoveSharesViaConsoleBig.png" />
+    <Resource Include="Shared\Images\Menus\RemoveSharesViaConsoleSmall.png" />
+    <Resource Include="Shared\Images\Menus\ShowApplicationLogSmall.png" />
+    <Resource Include="Shared\Images\Menus\ShowApplicationLogBig.png" />
+    <Resource Include="Shared\Images\Info.png" />
+    <Resource Include="Shared\Images\HelpSmall.png" />
+    <Resource Include="Shared\Images\MoveDown.png" />
+    <Resource Include="Shared\Images\MoveUp.png" />
+    <Resource Include="Shared\Images\Menus\AppMenuBig.png" />
+    <Resource Include="Shared\Images\Menus\AppMenuSmall.png" />
+    <Resource Include="Shared\Images\Menus\ExitBig.png" />
+    <Resource Include="Shared\Images\Menus\MinimizeBig.png" />
+    <Resource Include="Shared\Images\Menus\MinimizeSmall.png" />
+    <Resource Include="Shared\Images\TrayImages\ConnectionError.png" />
+    <Resource Include="Shared\Images\TrayImages\NoConnections.png" />
+    <Resource Include="Shared\Images\TrayImages\Degraded.png" />
+    <Resource Include="Shared\Images\TrayImages\Connected.png" />
+    <Resource Include="Shared\Images\LoginSmall.png" />
+    <Resource Include="Shared\Images\TrayIcons\Degraded.ico" />
+    <Resource Include="Shared\Images\Workgroup.png" />
+    <Resource Include="Shared\Images\Menus\ShowStatusLogBig.png" />
+    <Resource Include="Shared\Images\Menus\OpenSmall.png" />
+    <Resource Include="Shared\Images\Menus\ExitSmall.png" />
+    <Resource Include="Shared\Images\Menus\ShowStatusLogSmall.png" />
+    <Resource Include="Shared\Images\Options.png" />
+    <Resource Include="Shared\Images\Menus\OptionsBig.png" />
+    <Resource Include="Shared\Images\Menus\OptionsSmall.png" />
+    <Resource Include="Shared\Images\Status\Degraded.png" />
+    <Resource Include="Shared\Images\TrayIcons\Connected.ico" />
+    <Resource Include="Shared\Images\TrayIcons\ConnectionError.ico" />
+    <Resource Include="Shared\Images\TrayIcons\NoConnections.ico" />
+    <Resource Include="Shared\Images\DragInsert.png" />
+    <Resource Include="Shared\Images\ShareOrganizer.png" />
+    <Resource Include="Shared\Images\CustomLoginWarning.png" />
+    <Resource Include="Shared\Images\Menus\AboutSmall.png" />
+    <Resource Include="Shared\Images\Menus\AboutBig.png" />
+    <Resource Include="Shared\Images\AutoConnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetDrives.Platform\NetDrives.Platform.csproj">
+      <Project>{4E9E0D00-ECA2-4AE3-8777-38E9B1772A92}</Project>
+      <Name>NetDrives.Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\Images\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="日志跟踪说明.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

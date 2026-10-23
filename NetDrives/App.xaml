@@ -1,0 +1,22 @@
+﻿<Application x:Class="Hardcodet.NetDrives.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Startup="PerformStartup"
+    ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+         
+    	<ResourceDictionary>
+    		<ResourceDictionary.MergedDictionaries>
+    			<ResourceDictionary Source="Shared\Brushes\Brushes.xaml"/>
+    			<ResourceDictionary Source="Shared\Styles\CommonControlStyles.xaml"/>
+    			<ResourceDictionary Source="Shared\Styles\ButtonStyles.xaml"/>
+          <ResourceDictionary Source="Shared\Styles\ComboBox.xaml"/>
+          <ResourceDictionary Source="Shared\Styles\Sliders.xaml"/>
+          <ResourceDictionary Source="Shared\Styles\MenuStyles.xaml" />
+          <ResourceDictionary Source="Shared\Menus\MenuResources.xaml" />
+          <ResourceDictionary Source="Shared\Styles\GridStyles.xaml"/>
+    		</ResourceDictionary.MergedDictionaries>
+    	</ResourceDictionary>
+         
+    </Application.Resources>
+</Application>

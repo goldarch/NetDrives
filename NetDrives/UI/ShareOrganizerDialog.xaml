@@ -1,0 +1,179 @@
+﻿<Window
+  x:Class="Hardcodet.NetDrives.UI.ShareOrganizerDialog"
+  x:Name="me"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="{ext:Resource ShareOrganizer_Window_Title}"
+  Height="470"
+  Width="600"
+  Style="{DynamicResource DialogWindow}"
+  WindowStartupLocation="CenterOwner"
+  WindowStyle="ToolWindow"
+  ResizeMode="CanResizeWithGrip"
+  MinWidth="430"
+  MinHeight="350"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d"
+  xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit"
+  xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions">
+  <Grid
+    PreviewMouseLeftButtonUp="OnMouseLeftButtonUp"
+    MouseMove="OnMouseMove">
+
+    <TextBlock
+      Margin="10,60,13.12,0"
+      TextWrapping="Wrap"
+      HorizontalAlignment="Stretch"
+      Style="{DynamicResource DefaultLabel}"
+      Width="Auto"
+      VerticalAlignment="Top"
+      Height="99.72">
+      <Run Text="{ext:Resource ShareOrganizer_Instruction_1}" /><LineBreak /><Run
+        Text="{ext:Resource ShareOrganizer_Instruction_2}" />
+    </TextBlock>
+
+    <TextBlock
+      Margin="10,14,92,0"
+      Style="{DynamicResource TitleLabel}"
+      VerticalAlignment="Top"
+      Height="Auto"
+      TextWrapping="Wrap"
+      Text="{ext:Resource ShareOrganizer_Title}" />
+
+    <Button
+      x:Name="btnOk"
+      Click="btnOk_Click"
+      Margin="0,0,13.12,12.32"
+      Content="{ext:Resource Common_OK}"
+      IsDefault="True"
+      Width="90"
+      TabIndex="3"
+      HorizontalAlignment="Right"
+      VerticalAlignment="Bottom"
+      Height="21.68"
+      d:LayoutOverrides="Width" />
+
+    <dg:DataGrid
+      x:Name="shareGrid"
+      BeginningEdit="OnBeginEdit"
+      CellEditEnding="OnEndEdit"
+      ItemsSource="{Binding}"
+      SelectionMode="Single"
+      PreviewMouseLeftButtonDown="OnMouseLeftButtonDown"
+      RowHeaderWidth="30"
+      HeadersVisibility="All"
+      CanUserResizeRows="False"
+      CanUserResizeColumns="False"
+      CanUserDeleteRows="False"
+      CanUserAddRows="False"
+      CanUserReorderColumns="False"
+      CanUserSortColumns="False"
+      IsReadOnly="False"
+      Margin="10,135,13.12,52.68"
+      VerticalAlignment="Stretch"
+      Background="{x:Null}"
+      HorizontalAlignment="Stretch">
+
+      <dg:DataGrid.Columns>
+
+        <!-- move up -->
+        <dg:DataGridTemplateColumn
+          Header=""
+          Visibility="Collapsed"
+          IsReadOnly="True"
+          Width="24">
+
+          <dg:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image
+                Width="16"
+                Height="16"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Source="/Shared/Images/MoveUp.png" />
+            </DataTemplate>
+          </dg:DataGridTemplateColumn.CellTemplate>
+        </dg:DataGridTemplateColumn>
+
+        <!-- move down -->
+        <dg:DataGridTemplateColumn
+          Header=""
+          Visibility="Collapsed"
+          IsReadOnly="True"
+          Width="24">
+
+          <dg:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image
+                Width="16"
+                Height="16"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Source="/Shared/Images/MoveDown.png" />
+            </DataTemplate>
+          </dg:DataGridTemplateColumn.CellTemplate>
+        </dg:DataGridTemplateColumn>
+
+        <!-- Name -->
+        <dg:DataGridTextColumn
+          IsReadOnly="False"
+          Header="{ext:Resource Grid_Column_Name}"
+          Width="2*"
+          FontWeight="Bold"
+          MinWidth="100"
+          Binding="{Binding Path=Name}" />
+
+        <!-- Network Path -->
+        <dg:DataGridTextColumn
+          Header="{ext:Resource Grid_Column_NetworkPath}"
+          IsReadOnly="True"
+          Width="3*"
+          Binding="{Binding Path=NetworkLocation}" />
+
+      </dg:DataGrid.Columns>
+    </dg:DataGrid>
+
+
+    <Image
+      HorizontalAlignment="Right"
+      Margin="0,0,10,0"
+      VerticalAlignment="Top"
+      Width="72"
+      Height="72"
+      Opacity="1"
+      Source="..\Shared\Images\ShareOrganizer.png"
+      Stretch="Fill" />
+
+
+    <!-- the popup that is displayed if user moves rows -->
+    <Popup
+      x:Name="popup1"
+      IsHitTestVisible="False"
+      Placement="RelativePoint"
+      PlacementTarget="{Binding ElementName=me}"
+      AllowsTransparency="True">
+      <Border
+        BorderBrush="{DynamicResource CellBorderBrush}"
+        BorderThickness="2"
+        Background="White"
+        Opacity="0.75">
+        <StackPanel
+          Orientation="Horizontal"
+          Margin="4,3,8,3">
+          <Image
+            Source="/Shared/Images/DragInsert.png"
+            Width="16"
+            Height="16" />
+          <TextBlock
+            Style="{DynamicResource DefaultLabel}"
+            FontWeight="Bold"
+            VerticalAlignment="Center"
+            Text="{Binding ElementName=me, Path=DraggedItem.Name}"
+            Margin="8,0,0,0" />
+        </StackPanel>
+      </Border>
+    </Popup>
+
+  </Grid>
+</Window>

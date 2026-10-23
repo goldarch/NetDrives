@@ -1,0 +1,88 @@
+﻿<Window
+  x:Class="Hardcodet.NetDrives.UI.Connections.StatusLogDialog"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="{ext:Resource StatusLog_Window_Title}"
+  Height="299"
+  Width="411"
+  Style="{DynamicResource DialogWindow}"
+  AllowsTransparency="True"
+  WindowStyle="None"
+  Background="{x:Null}"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:dg="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
+  xmlns:Converters="clr-namespace:Hardcodet.NetDrives.Shared.Converters"
+  xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions"
+  mc:Ignorable="d"
+  WindowStartupLocation="CenterOwner">
+  <Grid>
+    <Border
+      Margin="5,5,5,5"
+      Width="Auto"
+      Height="Auto"
+      Background="{DynamicResource DialogBackgroundBrush}"
+      CornerRadius="6,6,6,6">
+      <Border.Effect>
+        <DropShadowEffect
+          Color="#FF99A5B1" />
+      </Border.Effect>
+    </Border>
+    <Button
+      x:Name="btnOk"
+      Click="CloseDialog"
+      Content="{ext:Resource Common_OK}"
+      IsDefault="True"
+      TabIndex="10"
+      HorizontalAlignment="Right"
+      Margin="0,0,15,15"
+      VerticalAlignment="Bottom"
+      Width="90"
+      Height="21.68" />
+    <dg:DataGrid
+      IsReadOnly="True"
+      ItemsSource="{Binding}"
+      CanUserSortColumns="False"
+      CanUserResizeColumns="False"
+      RowStyle="{StaticResource TrayConnectionsGridRow}"
+      RowHeight="20"
+      FontSize="12"
+      VerticalAlignment="Stretch"
+      Margin="20,55,15,46.68"
+      Background="{x:Null}">
+
+      <dg:DataGrid.Columns>
+
+        <!-- Timestamp -->
+        <dg:DataGridTextColumn
+          Header="{ext:Resource StatusLog_Column_Timestamp}"
+          FontSize="10"
+          Width="120"
+          Binding="{Binding Path=Timestamp, StringFormat=\{0:g\}}" />
+
+        <!-- Status -->
+        <dg:DataGridTextColumn
+          Header="{ext:Resource Grid_Column_Status}"
+          FontSize="10"
+          Width="120"
+          Binding="{Binding Path=Status}" />
+
+        <!-- ConnectResult -->
+        <dg:DataGridTextColumn
+          Header="{ext:Resource StatusLog_Column_Info}"
+          FontSize="10"
+          Width="*"
+          Binding="{Binding Path=ConnectResult}" />
+
+      </dg:DataGrid.Columns>
+    </dg:DataGrid>
+    <TextBlock
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      TextWrapping="Wrap"
+      Margin="20,19,0,0"
+      Style="{DynamicResource TitleLabel}"><Run
+        Language="de-ch"
+        Text="{ext:Resource StatusLog_Title}" /></TextBlock>
+  </Grid>
+</Window>

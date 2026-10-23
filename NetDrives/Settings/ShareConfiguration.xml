@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration Version="1.0.0">
+  <Shares>
+    <Share Id="Home" Name="Home" AutoConnect="true" VolumeLabel="Home" LoginStrategy="Automatic" Index="0" DriveLetter="H">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30\philipp</NetworkLocation>
+    </Share>
+    <Share Id="Krusty Root" Name="Krusty Root" VolumeLabel="MyDrive_R" Index="9" AutoConnect="false" LoginStrategy="Automatic">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30</NetworkLocation>
+    </Share>
+    <Share Id="Public Unmapped" Name="Public Unmapped" VolumeLabel="" AutoConnect="false" LoginStrategy="Automatic" Index="1">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30\public</NetworkLocation>
+    </Share>
+    <Share Id="Temp" Name="Temp" Index="2" VolumeLabel="" AutoConnect="false" LoginStrategy="Automatic">
+      <UserName>philipp</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAC27ZucL7HX5rqXoKAD4ZtzAAAAAASAAACgAAAAEAAAABUFYvnzWN7M5yUjMxt9dTMYAAAArRHhN2NdCs5Jna3Ss45kxbB7hHkRnxC6FAAAAJ153ua3QOrcGitMxzgqE2zu5EUD</Password>
+      <NetworkLocation>\\10.0.0.30\temp</NetworkLocation>
+    </Share>
+    <Share Id="Blog Uploads" Name="Blog Uploads" VolumeLabel="" AutoConnect="false" LoginStrategy="Automatic" Index="3">
+      <UserName>www</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAABwG3DbmIeX/cOMdpzEN4yIAAAAAASAAACgAAAAEAAAAFTBzfrMSnOqrM6kokfsX+4YAAAAaPhuD5HVMChJU2zt+MMOBDUCP+bjzEdbFAAAAGPzDSyBi9YG7vSVIXsZGUmPw97L</Password>
+      <NetworkLocation>\\KRUSTY\appdata\servers\www\websites\hardcodet\wordpress\uploads</NetworkLocation>
+    </Share>
+    <Share Id="Wanda Public" Name="Wanda Public" VolumeLabel="" AutoConnect="false" LoginStrategy="Prompt" Index="4">
+      <UserName>wanda</UserName>
+      <Password>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIDPeux6RUKdsPPRbYBe3AAAAAACAAAAAAADZgAAqAAAABAAAAD54LsUddCkkKbNcX6lE3qWAAAAAASAAACgAAAAEAAAAEY2ofFteWs+A5ElkFtd/n8gAAAA1O8yUvvqNYawTDnKRK3n66mfP/9pJZtcxQSpHgIC6okUAAAAoye1iTb1r+zh+kd7UQD4OguVa0o=</Password>
+      <NetworkLocation>\\KRUSTY\public</NetworkLocation>
+    </Share>
+    <Share Id="Public Anonymous" Index="5" Name="Public Anonymous" VolumeLabel="" AutoConnect="false" LoginStrategy="Automatic">
+      <UserName></UserName>
+      <Password></Password>
+      <NetworkLocation>\\10.0.0.30\public</NetworkLocation>
+    </Share>
+    <Share Id="UncTempUnsecured" Name="Lucy Backups" Index="8">
+      <UserName>philipp</UserName>
+      <Password />
+      <NetworkLocation>\\10.0.0.100\backup</NetworkLocation>
+    </Share>
+  </Shares>
+  <ApplicationSettings></ApplicationSettings>
+</Configuration>

@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="ApplicationName" xml:space="preserve"><value>NetDrives</value></data>
+    <data name="Ask_Whether_Configuration_Should_Be_Removed" xml:space="preserve"><value>Really remove the configuration for share '{0}'?</value></data>
+    <data name="Ask_Whether_To_Connect_To_New_Share" xml:space="preserve"><value>Would you like to connect to '{0}' now?</value></data>
+    <data name="Connection_Dialog_Title" xml:space="preserve"><value>Connect to '{0}'</value></data>
+    <data name="Connection_In_Progress_Message" xml:space="preserve"><value>Connecting to remote location '{0}'. Please stand by...</value></data>
+
+    <data name="Context_Menu_Browse" xml:space="preserve"><value>Browse...</value></data>
+    <data name="Context_Menu_CloseConnection" xml:space="preserve"><value>Close Connection...</value></data>
+    <data name="Context_Menu_Connect" xml:space="preserve"><value>Connect</value></data>
+    <data name="Context_Menu_ConnectionLog" xml:space="preserve"><value>Connection History...</value></data>
+    <data name="Context_Menu_CreateConfiguration" xml:space="preserve"><value>Create NetDrives Configuration...</value></data>
+    <data name="Context_Menu_Disconnect" xml:space="preserve"><value>Disconnect</value></data>
+    <data name="Context_Menu_Edit" xml:space="preserve"><value>Edit...</value></data>
+    <data name="Context_Menu_OpenMainWindow" xml:space="preserve"><value>Open NetDrives</value></data>
+    <data name="Context_Menu_Quit" xml:space="preserve"><value>Quit</value></data>
+    <data name="Context_Menu_Remove" xml:space="preserve"><value>Remove</value></data>
+
+    <data name="Disconnection_In_Progress_Message" xml:space="preserve"><value>Closing the connection to '{0}'. Please stand by...</value></data>
+    <data name="Error_Displayed_When_Browse_Request_Fails" xml:space="preserve"><value>System error {0} when trying to open '{1}': {2}.</value></data>
+    <data name="Information_That_No_Log_File_Is_Available" xml:space="preserve"><value>No logged data is available.</value></data>
+    <data name="Logged_Message_If_Configuration_File_Could_Not_Be_Read" xml:space="preserve"><value>An unexpected error occurred while trying to read configuration file '{0}'.</value></data>
+
+    <data name="Menu_About_Title" xml:space="preserve"><value>About...</value></data>
+    <data name="Menu_About_ToolTip_Title" xml:space="preserve"><value>About NetDrives</value></data>
+    <data name="Menu_AddConnection_Title" xml:space="preserve"><value>New...</value></data>
+    <data name="Menu_AddConnection_ToolTip_Description" xml:space="preserve"><value>Configure a new connection to a network location.</value></data>
+    <data name="Menu_AddConnection_ToolTip_Title" xml:space="preserve"><value>New Network Location</value></data>
+    <data name="Menu_ApplicationLog_Title" xml:space="preserve"><value>Application Log</value></data>
+    <data name="Menu_ApplicationLog_ToolTip_Description" xml:space="preserve"><value>View NetDrives log file to diagnose application errors.</value></data>
+    <data name="Menu_ApplicationLog_ToolTip_Title" xml:space="preserve"><value>Open Application Log</value></data>
+    <data name="Menu_Browse_Title" xml:space="preserve"><value>Browse...</value></data>
+    <data name="Menu_Browse_ToolTip_Description" xml:space="preserve"><value>Open network location in Windows Explorer.</value></data>
+    <data name="Menu_Browse_ToolTip_Title" xml:space="preserve"><value>Browse Network Location</value></data>
+    <data name="Menu_CheckForUpdates_Title" xml:space="preserve"><value>Check for Updates...</value></data>
+    <data name="Menu_CheckForUpdates_ToolTip_Description" xml:space="preserve"><value>Visit NetDrives website and check for updates.</value></data>
+    <data name="Menu_CheckForUpdates_ToolTip_Title" xml:space="preserve"><value>Check for Updates</value></data>
+    <data name="Menu_ClearConnections_Title" xml:space="preserve"><value>Clear Connections</value></data>
+    <data name="Menu_ClearConnections_ToolTip_Description" xml:space="preserve"><value>Opens the console and clears all connections. You will have to confirm deletion individually.</value></data>
+    <data name="Menu_ClearConnections_ToolTip_Title" xml:space="preserve"><value>Clear all Connections</value></data>
+    <data name="Menu_ConnectionLog_Title" xml:space="preserve"><value>Connection History...</value></data>
+    <data name="Menu_ConnectionLog_ToolTip_Description" xml:space="preserve"><value>Show connection log of the selected share.</value></data>
+    <data name="Menu_ConnectionLog_ToolTip_Title" xml:space="preserve"><value>Show Connection Log</value></data>
+    <data name="Menu_Connect_Title" xml:space="preserve"><value>Connect</value></data>
+    <data name="Menu_Connect_ToolTip_Description" xml:space="preserve"><value>Connect to the selected network location.</value></data>
+    <data name="Menu_Connect_ToolTip_Title" xml:space="preserve"><value>Connect</value></data>
+    <data name="Menu_Disconnect_Title" xml:space="preserve"><value>Disconnect</value></data>
+    <data name="Menu_Disconnect_ToolTip_Description" xml:space="preserve"><value>Disconnect from the selected network location.</value></data>
+    <data name="Menu_Disconnect_ToolTip_Title" xml:space="preserve"><value>Disconnect</value></data>
+    <data name="Menu_EditConnection_Title" xml:space="preserve"><value>Edit...</value></data>
+    <data name="Menu_EditConnection_ToolTip_Description" xml:space="preserve"><value>Edit the settings for the selected network location.</value></data>
+    <data name="Menu_EditConnection_ToolTip_Title" xml:space="preserve"><value>Edit Network Location</value></data>
+    <data name="Menu_Exit_Title" xml:space="preserve"><value>Quit</value></data>
+    <data name="Menu_Exit_ToolTip_Description" xml:space="preserve"><value>Close the application.</value></data>
+    <data name="Menu_Exit_ToolTip_Title" xml:space="preserve"><value>Quit NetDrives</value></data>
+    <data name="Menu_Group_Connections" xml:space="preserve"><value>Connections</value></data>
+    <data name="Menu_Group_Diagnose" xml:space="preserve"><value>Diagnose</value></data>
+    <data name="Menu_Group_Shares" xml:space="preserve"><value>My Shares</value></data>
+    <data name="Menu_Group_Tools" xml:space="preserve"><value>Tools</value></data>
+    <data name="Menu_ListConnections_Title" xml:space="preserve"><value>List Connections</value></data>
+    <data name="Menu_ListConnections_ToolTip_Description" xml:space="preserve"><value>Opens the console and lists all the system's connections.</value></data>
+    <data name="Menu_ListConnections_ToolTip_Title" xml:space="preserve"><value>List Connections on Console</value></data>
+    <data name="Menu_MinimizeToTray_Title" xml:space="preserve"><value>Hide Main Window</value></data>
+    <data name="Menu_MinimizeToTray_ToolTip_Description" xml:space="preserve"><value>Minimizes the window to the system tray.</value></data>
+    <data name="Menu_MinimizeToTray_ToolTip_Title" xml:space="preserve"><value>Hide Main Window</value></data>
+    <data name="Menu_Options_Title" xml:space="preserve"><value>Options...</value></data>
+    <data name="Menu_Options_ToolTip_Description" xml:space="preserve"><value>Edit application settings.</value></data>
+    <data name="Menu_Options_ToolTip_Title" xml:space="preserve"><value>NetDrives Options</value></data>
+    <data name="Menu_OrganizeShares_Title" xml:space="preserve"><value>Organize Shares...</value></data>
+    <data name="Menu_OrganizeShares_ToolTip_Description" xml:space="preserve"><value>Quickly sort and name your existing shares.</value></data>
+    <data name="Menu_OrganizeShares_ToolTip_Title" xml:space="preserve"><value>Organize Your Shares</value></data>
+    <data name="Menu_RemoveConnection_Title" xml:space="preserve"><value>Remove</value></data>
+    <data name="Menu_RemoveConnection_ToolTip_Description" xml:space="preserve"><value>Removes the selected network location from the application.</value></data>
+    <data name="Menu_RemoveConnection_ToolTip_Title" xml:space="preserve"><value>Remove Network Location</value></data>
+
+    <data name="Message_About_Unhandled_Exception" xml:space="preserve"><value>An unexpected error occurred. Please check the application log for further information. Error message: {0}</value></data>
+    <data name="NetDrives_Homepage" xml:space="preserve"><value>http://www.hardcodet.net/netdrives/</value></data>
+    <data name="New_Share_Default_Name" xml:space="preserve"><value>New Share</value></data>
+    <data name="SayHello" xml:space="preserve"><value>hello {0}</value></data>
+
+    <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <data name="ShareConfiguration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\settings\shareconfiguration.xml;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    </data>
+
+    <data name="SysTray_Tooltip_Text_When_All_Connections_Valid" xml:space="preserve"><value>Connections OK</value></data>
+    <data name="SysTray_Tooltip_Text_When_Connection_Degraded" xml:space="preserve"><value>Degraded Connections</value></data>
+    <data name="SysTray_Tooltip_Text_When_Connection_Errors" xml:space="preserve"><value>Connection Errors</value></data>
+    <data name="SysTray_Tooltip_Text_When_No_Connections" xml:space="preserve"><value>No Active Connections</value></data>
+
+    <data name="ToolTip_Explaining_Auto_Connect" xml:space="preserve"><value>Check this option in if NetDrives should automatically connect to this share on startup.</value></data>
+    <data name="ToolTip_Explaining_Drive_Letters" xml:space="preserve"><value>You can map a network location to a drive letter. If you chose this option, the network share will appear as a drive in Windows Explorer just like a local hard disk.</value></data>
+    <data name="ToolTip_Explaining_Share_Name" xml:space="preserve"><value>A descriptive name which allows you to identify the share.</value></data>
+    <data name="ToolTip_Title_Auto_Connect" xml:space="preserve"><value>Automatic Connection</value></data>
+    <data name="ToolTip_Title_Drive_Letter" xml:space="preserve"><value>Drive Mapping</value></data>
+    <data name="ToolTip_Title_For_Network_Address_Samples" xml:space="preserve"><value>Network Address</value></data>
+    <data name="ToolTip_Title_Share_Name" xml:space="preserve"><value>Share Name</value></data>
+
+    <data name="ToolTip_With_Network_Address_Samples" xml:space="preserve">
+    <value>A network address starts with a double backslash (\\), followed by the computer's IP address or host name:
+
+\\192.168.0.11\Music
+\\ComputerName\Music
+\\192.168.0.30</value>
+  </data>
+
+    <data name="Validation_Error_If_Invalid_Network_Address" xml:space="preserve"><value>Invalid network address.</value></data>
+    <data name="Validation_Error_If_Missing_Network_Address" xml:space="preserve"><value>Please supply a network address.</value></data>
+    <data name="Validation_Error_If_Missing_Share_Name" xml:space="preserve"><value>Please provide a descriptive name for the share.</value></data>
+
+    <data name="Warning_About_Disabled_Auto_Connections" xml:space="preserve"><value>Autoconnect is not available if you want to log in manually.</value></data>
+    <data name="Warning_About_Disabled_Drive_Letters_For_Host_Locations" xml:space="preserve">
+    <value>Drive letters cannot be used if the network address points to a host rather than a share on the host.
+
+Examples:
+Host address: \\192.168.1.12
+Share address: \\192.168.1.12\Music</value>
+  </data>
+    <data name="Warning_About_Invalid_Settings_In_Configuration_Dialog" xml:space="preserve">
+    <value>Please correct the invalid settings first. Everything that is not ok has been highlighted.
+
+Tip: Move your mouse over the highlighted controls to get a hint about what's not ok.</value>
+  </data>
+    <data name="Warning_About_Missing_Password_If_Auto_Login_Was_Configured" xml:space="preserve"><value>The password for the automatic login is missing.</value></data>
+    <data name="Warning_About_Wrong_Password_Confirmation" xml:space="preserve"><value>The password confirmation did not match.</value></data>
+
+    <data name="Menu_Tab_Help" xml:space="preserve"><value>Help</value></data>
+    <data name="Menu_Tab_Shares" xml:space="preserve"><value>Shares</value></data>
+    <data name="Menu_Tab_Tools" xml:space="preserve"><value>Tools</value></data>
+
+    <data name="Error_Displayed_When_Setting_AutoStart_Failed" xml:space="preserve"><value>An error occurred when trying to set the registry entry for the AutoStart option: {0}</value></data>
+    <data name="Error_Displayed_When_Saving_Settings_Fails" xml:space="preserve"><value>An unexpected error occurred when trying to save the settings. If this error is causing you trouble, please report it on the NetDrives project page (see "About" screen). Error message: {0}</value></data>
+
+    <data name="Main_ConfiguredConnections_Title" xml:space="preserve">
+  <value>Configured Connections</value>
+</data>
+    <data name="Main_UnmanagedConnections_Header" xml:space="preserve">
+  <value>Other network connections (not configured in NetDrives, might be conflicting). Right-click for options...</value>
+</data>
+    <data name="Grid_Column_Name" xml:space="preserve"><value>Name</value></data>
+    <data name="Grid_Column_Drive" xml:space="preserve"><value>Drive</value></data>
+    <data name="Grid_Column_Host" xml:space="preserve"><value>Host</value></data>
+    <data name="Grid_Column_NetworkPath" xml:space="preserve"><value>Network Path</value></data>
+    <data name="Grid_Column_UserLogin" xml:space="preserve"><value>User Login</value></data>
+    <data name="Grid_Column_Status" xml:space="preserve"><value>Status</value></data>
+
+    <data name="Common_OK" xml:space="preserve"><value>OK</value></data>
+    <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+    <data name="Grid_Action_Connect" xml:space="preserve"><value>Connect</value></data>
+    <data name="Grid_Action_Disconnect" xml:space="preserve"><value>Disconnect</value></data>
+
+    <data name="Options_Window_Title" xml:space="preserve"><value>Options</value></data>
+    <data name="Options_AutoStart_Title" xml:space="preserve"><value>Auto-Start</value></data>
+    <data name="Options_AutoStart_Description" xml:space="preserve"><value>NetDrives can start automatically and run in the background when you log on to Windows.</value></data>
+    <data name="Options_AutoStart_Checkbox" xml:space="preserve"><value>Automatically start NetDrives when I log on to Windows</value></data>
+    <data name="Options_Tray_Title" xml:space="preserve"><value>System Tray</value></data>
+    <data name="Options_Tray_ShowIcon" xml:space="preserve"><value>Show icon in System Tray</value></data>
+    <data name="Options_Tray_CloseBehavior" xml:space="preserve"><value>When closing main window, keep running in System Tray</value></data>
+    <data name="Options_Language_Title" xml:space="preserve"><value>Language</value></data>
+    <data name="Options_Language_Description" xml:space="preserve"><value>Change display language immediately after saving options.</value></data>
+
+    <data name="ConnectionError_Title_Format" xml:space="preserve"><value>Connecting to share '{0}' failed</value></data>
+    <data name="ConnectionError_Question" xml:space="preserve"><value>How would you like to proceed:</value></data>
+    <data name="ConnectionError_Action_Retry" xml:space="preserve"><value>Try again</value></data>
+    <data name="ConnectionError_Action_Reconfigure" xml:space="preserve"><value>Change the share's configuration</value></data>
+    <data name="ConnectionError_Action_ChangeLogin" xml:space="preserve"><value>Log in with different user name / password</value></data>
+
+    <data name="DisconnectionError_Window_Title" xml:space="preserve"><value>Disconnection Error</value></data>
+    <data name="DisconnectionError_Title_Format" xml:space="preserve"><value>Could not disconnect from '{0}'</value></data>
+    <data name="DisconnectionError_Description" xml:space="preserve"><value>The connection is probably in use (e.g. due to an open file). Do you want to try a forced disconnection? Be aware that this could lead to data loss.</value></data>
+    <data name="DisconnectionError_Option_Normal" xml:space="preserve"><value>No, I closed my open files. Try again to disconnect normally.</value></data>
+    <data name="DisconnectionError_Option_Force" xml:space="preserve"><value>Yes, force disconnection.</value></data>
+
+    <data name="StatusLog_Window_Title" xml:space="preserve"><value>Status Log</value></data>
+    <data name="StatusLog_Title" xml:space="preserve"><value>Status Log</value></data>
+    <data name="StatusLog_Column_Timestamp" xml:space="preserve"><value>Timestamp</value></data>
+    <data name="StatusLog_Column_Info" xml:space="preserve"><value>Info</value></data>
+
+    <data name="SysTrayPopup_Title" xml:space="preserve"><value>NetDrives Shares</value></data>
+
+	<data name="ConnectionError_Title_Format" xml:space="preserve"><value>Connecting to share '{0}' failed</value></data>
+    <data name="ConnectionError_Question" xml:space="preserve"><value>How would you like to proceed:</value></data>
+    <data name="ConnectionError_Action_Retry" xml:space="preserve"><value>Try again</value></data>
+    <data name="ConnectionError_Action_Reconfigure" xml:space="preserve"><value>Change the share's configuration</value></data>
+    <data name="ConnectionError_Action_ChangeLogin" xml:space="preserve"><value>Log in with different user name / password</value></data>
+    <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+    <data name="Grid_Action_Connect" xml:space="preserve"><value>Connect</value></data>
+
+	<data name="DisconnectionError_Title_Prefix" xml:space="preserve"><value>Could not disconnect from '</value></data>
+    <data name="DisconnectionError_Title_Suffix" xml:space="preserve"><value>'</value></data>
+
+	<!-- 补齐 ShareConfig_*（英文） -->
+    <data name="ShareConfig_WindowTitle" xml:space="preserve"><value>Configure Share</value></data>
+    <data name="ShareConfig_ShareSettings" xml:space="preserve"><value>Share Settings</value></data>
+    <data name="ShareConfig_SecuritySettings" xml:space="preserve"><value>Security Settings</value></data>
+    <data name="ShareConfig_ShareName" xml:space="preserve"><value>Share name</value></data>
+    <data name="ShareConfig_NetworkAddress" xml:space="preserve"><value>Network address</value></data>
+    <data name="ShareConfig_DriveLetterOptional" xml:space="preserve"><value>Drive letter (optional)</value></data>
+    <data name="ShareConfig_LoginAsUserOptional" xml:space="preserve"><value>Login as user (optional)</value></data>
+    <data name="ShareConfig_AutoConnectAtStartup" xml:space="preserve"><value>Automatically connect at startup</value></data>
+    <data name="ShareConfig_Password" xml:space="preserve"><value>Password</value></data>
+    <data name="ShareConfig_PasswordConfirmation" xml:space="preserve"><value>Password confirmation</value></data>
+
+	<data name="ShareOrganizer_Window_Title" xml:space="preserve"><value>Organize Shares</value></data>
+    <data name="ShareOrganizer_Title" xml:space="preserve"><value>Organize Your Shares</value></data>
+    <data name="ShareOrganizer_Instruction_1" xml:space="preserve"><value>1: To change order, drag and drop your shares to their preferred positions within the list.</value></data>
+    <data name="ShareOrganizer_Instruction_2" xml:space="preserve"><value>2: You can change the names of your shares directly in the grid.</value></data>
+
+    <data name="ShareConfig_LoginMode_Auto" xml:space="preserve"><value>Automatically log in with the following password:</value></data>
+    <data name="ShareConfig_LoginMode_Prompt" xml:space="preserve"><value>Ask me for the password when connecting</value></data>
+    <data name="ShareConfig_LoginMode_None" xml:space="preserve"><value>No password is required for this share</value></data>
+</root>

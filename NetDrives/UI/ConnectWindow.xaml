@@ -1,0 +1,19 @@
+﻿<Window x:Class="Hardcodet.NetDrives.UI.ConnectWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Connect" Height="300" Width="300"
+        Background="{DynamicResource DialogBackgroundBrush}"
+    xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions">
+    <Grid>
+      
+    <!-- Display a formatted text -->
+    <TextBlock
+      Margin="0,20,0,20"
+      HorizontalAlignment="Center"
+      Style="{DynamicResource TitleLabel}"
+      x:Name="Title"
+      Text="{Binding Path=Name,
+                     StringFormat={ext:Resource Ask_Whether_To_Connect_To_New_Share}}" />
+      
+  </Grid>
+</Window>

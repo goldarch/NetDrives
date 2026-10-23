@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="ApplicationName" xml:space="preserve"><value>NetDrives</value></data>
+    <data name="Ask_Whether_Configuration_Should_Be_Removed" xml:space="preserve"><value>确实要删除共享“{0}”的配置吗？</value></data>
+    <data name="Ask_Whether_To_Connect_To_New_Share" xml:space="preserve"><value>是否现在连接到“{0}”？</value></data>
+    <data name="Connection_Dialog_Title" xml:space="preserve"><value>连接到“{0}”</value></data>
+    <data name="Connection_In_Progress_Message" xml:space="preserve"><value>正在连接远程位置“{0}”，请稍候...</value></data>
+
+    <data name="Context_Menu_Browse" xml:space="preserve"><value>浏览...</value></data>
+    <data name="Context_Menu_CloseConnection" xml:space="preserve"><value>关闭连接...</value></data>
+    <data name="Context_Menu_Connect" xml:space="preserve"><value>连接</value></data>
+    <data name="Context_Menu_ConnectionLog" xml:space="preserve"><value>连接历史...</value></data>
+    <data name="Context_Menu_CreateConfiguration" xml:space="preserve"><value>创建 NetDrives 配置...</value></data>
+    <data name="Context_Menu_Disconnect" xml:space="preserve"><value>断开连接</value></data>
+    <data name="Context_Menu_Edit" xml:space="preserve"><value>编辑...</value></data>
+    <data name="Context_Menu_OpenMainWindow" xml:space="preserve"><value>打开 NetDrives</value></data>
+    <data name="Context_Menu_Quit" xml:space="preserve"><value>退出</value></data>
+    <data name="Context_Menu_Remove" xml:space="preserve"><value>移除</value></data>
+
+    <data name="Disconnection_In_Progress_Message" xml:space="preserve"><value>正在关闭到“{0}”的连接，请稍候...</value></data>
+    <data name="Error_Displayed_When_Browse_Request_Fails" xml:space="preserve"><value>尝试打开“{1}”时发生系统错误 {0}：{2}。</value></data>
+    <data name="Information_That_No_Log_File_Is_Available" xml:space="preserve"><value>没有可用的日志数据。</value></data>
+    <data name="Logged_Message_If_Configuration_File_Could_Not_Be_Read" xml:space="preserve"><value>读取配置文件“{0}”时发生意外错误。</value></data>
+
+    <data name="Menu_About_Title" xml:space="preserve"><value>关于...</value></data>
+    <data name="Menu_About_ToolTip_Title" xml:space="preserve"><value>关于 NetDrives</value></data>
+    <data name="Menu_AddConnection_Title" xml:space="preserve"><value>新建...</value></data>
+    <data name="Menu_AddConnection_ToolTip_Description" xml:space="preserve"><value>为网络位置配置新的连接。</value></data>
+    <data name="Menu_AddConnection_ToolTip_Title" xml:space="preserve"><value>新建网络位置</value></data>
+    <data name="Menu_ApplicationLog_Title" xml:space="preserve"><value>应用日志</value></data>
+    <data name="Menu_ApplicationLog_ToolTip_Description" xml:space="preserve"><value>查看 NetDrives 日志文件以诊断应用错误。</value></data>
+    <data name="Menu_ApplicationLog_ToolTip_Title" xml:space="preserve"><value>打开应用日志</value></data>
+    <data name="Menu_Browse_Title" xml:space="preserve"><value>浏览...</value></data>
+    <data name="Menu_Browse_ToolTip_Description" xml:space="preserve"><value>在 Windows 资源管理器中打开网络位置。</value></data>
+    <data name="Menu_Browse_ToolTip_Title" xml:space="preserve"><value>浏览网络位置</value></data>
+    <data name="Menu_CheckForUpdates_Title" xml:space="preserve"><value>检查更新...</value></data>
+    <data name="Menu_CheckForUpdates_ToolTip_Description" xml:space="preserve"><value>访问 NetDrives 网站并检查更新。</value></data>
+    <data name="Menu_CheckForUpdates_ToolTip_Title" xml:space="preserve"><value>检查更新</value></data>
+    <data name="Menu_ClearConnections_Title" xml:space="preserve"><value>清除连接</value></data>
+    <data name="Menu_ClearConnections_ToolTip_Description" xml:space="preserve"><value>打开控制台并清除所有连接。你需要逐个确认删除。</value></data>
+    <data name="Menu_ClearConnections_ToolTip_Title" xml:space="preserve"><value>清除所有连接</value></data>
+    <data name="Menu_ConnectionLog_Title" xml:space="preserve"><value>连接历史...</value></data>
+    <data name="Menu_ConnectionLog_ToolTip_Description" xml:space="preserve"><value>显示所选共享的连接日志。</value></data>
+    <data name="Menu_ConnectionLog_ToolTip_Title" xml:space="preserve"><value>显示连接日志</value></data>
+    <data name="Menu_Connect_Title" xml:space="preserve"><value>连接</value></data>
+    <data name="Menu_Connect_ToolTip_Description" xml:space="preserve"><value>连接到所选网络位置。</value></data>
+    <data name="Menu_Connect_ToolTip_Title" xml:space="preserve"><value>连接</value></data>
+    <data name="Menu_Disconnect_Title" xml:space="preserve"><value>断开连接</value></data>
+    <data name="Menu_Disconnect_ToolTip_Description" xml:space="preserve"><value>断开与所选网络位置的连接。</value></data>
+    <data name="Menu_Disconnect_ToolTip_Title" xml:space="preserve"><value>断开连接</value></data>
+    <data name="Menu_EditConnection_Title" xml:space="preserve"><value>编辑...</value></data>
+    <data name="Menu_EditConnection_ToolTip_Description" xml:space="preserve"><value>编辑所选网络位置的设置。</value></data>
+    <data name="Menu_EditConnection_ToolTip_Title" xml:space="preserve"><value>编辑网络位置</value></data>
+    <data name="Menu_Exit_Title" xml:space="preserve"><value>退出</value></data>
+    <data name="Menu_Exit_ToolTip_Description" xml:space="preserve"><value>关闭应用程序。</value></data>
+    <data name="Menu_Exit_ToolTip_Title" xml:space="preserve"><value>退出 NetDrives</value></data>
+    <data name="Menu_Group_Connections" xml:space="preserve"><value>连接</value></data>
+    <data name="Menu_Group_Diagnose" xml:space="preserve"><value>诊断</value></data>
+    <data name="Menu_Group_Shares" xml:space="preserve"><value>我的共享</value></data>
+    <data name="Menu_Group_Tools" xml:space="preserve"><value>工具</value></data>
+    <data name="Menu_ListConnections_Title" xml:space="preserve"><value>列出连接</value></data>
+    <data name="Menu_ListConnections_ToolTip_Description" xml:space="preserve"><value>打开控制台并列出系统中的所有连接。</value></data>
+    <data name="Menu_ListConnections_ToolTip_Title" xml:space="preserve"><value>在控制台列出连接</value></data>
+    <data name="Menu_MinimizeToTray_Title" xml:space="preserve"><value>隐藏主窗口</value></data>
+    <data name="Menu_MinimizeToTray_ToolTip_Description" xml:space="preserve"><value>将窗口最小化到系统托盘。</value></data>
+    <data name="Menu_MinimizeToTray_ToolTip_Title" xml:space="preserve"><value>隐藏主窗口</value></data>
+    <data name="Menu_Options_Title" xml:space="preserve"><value>选项...</value></data>
+    <data name="Menu_Options_ToolTip_Description" xml:space="preserve"><value>编辑应用设置。</value></data>
+    <data name="Menu_Options_ToolTip_Title" xml:space="preserve"><value>NetDrives 选项</value></data>
+    <data name="Menu_OrganizeShares_Title" xml:space="preserve"><value>整理共享...</value></data>
+    <data name="Menu_OrganizeShares_ToolTip_Description" xml:space="preserve"><value>快速排序并重命名现有共享。</value></data>
+    <data name="Menu_OrganizeShares_ToolTip_Title" xml:space="preserve"><value>整理你的共享</value></data>
+    <data name="Menu_RemoveConnection_Title" xml:space="preserve"><value>移除</value></data>
+    <data name="Menu_RemoveConnection_ToolTip_Description" xml:space="preserve"><value>从应用中移除所选网络位置。</value></data>
+    <data name="Menu_RemoveConnection_ToolTip_Title" xml:space="preserve"><value>移除网络位置</value></data>
+
+    <data name="Message_About_Unhandled_Exception" xml:space="preserve"><value>发生了意外错误。请查看应用日志获取更多信息。错误消息：{0}</value></data>
+    <data name="NetDrives_Homepage" xml:space="preserve"><value>http://www.hardcodet.net/netdrives/</value></data>
+    <data name="New_Share_Default_Name" xml:space="preserve"><value>新共享</value></data>
+    <data name="SayHello" xml:space="preserve"><value>你好 {0}</value></data>
+
+    <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <data name="ShareConfiguration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\settings\shareconfiguration.xml;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    </data>
+
+    <data name="SysTray_Tooltip_Text_When_All_Connections_Valid" xml:space="preserve"><value>连接正常</value></data>
+    <data name="SysTray_Tooltip_Text_When_Connection_Degraded" xml:space="preserve"><value>连接状态降级</value></data>
+    <data name="SysTray_Tooltip_Text_When_Connection_Errors" xml:space="preserve"><value>连接错误</value></data>
+    <data name="SysTray_Tooltip_Text_When_No_Connections" xml:space="preserve"><value>没有活动连接</value></data>
+
+    <data name="ToolTip_Explaining_Auto_Connect" xml:space="preserve"><value>如果希望 NetDrives 启动时自动连接到此共享，请勾选此选项。</value></data>
+    <data name="ToolTip_Explaining_Drive_Letters" xml:space="preserve"><value>你可以将网络位置映射到驱动器盘符。选择后，该网络共享会像本地硬盘一样显示在 Windows 资源管理器中。</value></data>
+    <data name="ToolTip_Explaining_Share_Name" xml:space="preserve"><value>用于识别该共享的描述性名称。</value></data>
+    <data name="ToolTip_Title_Auto_Connect" xml:space="preserve"><value>自动连接</value></data>
+    <data name="ToolTip_Title_Drive_Letter" xml:space="preserve"><value>驱动器映射</value></data>
+    <data name="ToolTip_Title_For_Network_Address_Samples" xml:space="preserve"><value>网络地址</value></data>
+    <data name="ToolTip_Title_Share_Name" xml:space="preserve"><value>共享名称</value></data>
+
+    <data name="ToolTip_With_Network_Address_Samples" xml:space="preserve">
+    <value>网络地址以双反斜杠 (\\) 开头，后跟计算机 IP 地址或主机名：
+
+\\192.168.0.11\Music
+\\ComputerName\Music
+\\192.168.0.30</value>
+  </data>
+
+    <data name="Validation_Error_If_Invalid_Network_Address" xml:space="preserve"><value>无效的网络地址。</value></data>
+    <data name="Validation_Error_If_Missing_Network_Address" xml:space="preserve"><value>请输入网络地址。</value></data>
+    <data name="Validation_Error_If_Missing_Share_Name" xml:space="preserve"><value>请为该共享提供一个描述性名称。</value></data>
+
+    <data name="Warning_About_Disabled_Auto_Connections" xml:space="preserve"><value>如果使用手动登录，则无法使用自动连接。</value></data>
+    <data name="Warning_About_Disabled_Drive_Letters_For_Host_Locations" xml:space="preserve">
+    <value>当网络地址指向主机而不是主机上的共享时，不能使用驱动器盘符。
+
+示例：
+主机地址：\\192.168.1.12
+共享地址：\\192.168.1.12\Music</value>
+  </data>
+    <data name="Warning_About_Invalid_Settings_In_Configuration_Dialog" xml:space="preserve">
+    <value>请先修正无效设置。所有异常项都已高亮显示。
+
+提示：将鼠标悬停到高亮控件上可查看问题说明。</value>
+  </data>
+    <data name="Warning_About_Missing_Password_If_Auto_Login_Was_Configured" xml:space="preserve"><value>缺少自动登录密码。</value></data>
+    <data name="Warning_About_Wrong_Password_Confirmation" xml:space="preserve"><value>两次输入的密码不一致。</value></data>
+
+    <data name="Menu_Tab_Help" xml:space="preserve"><value>帮助</value></data>
+    <data name="Menu_Tab_Shares" xml:space="preserve"><value>共享</value></data>
+    <data name="Menu_Tab_Tools" xml:space="preserve"><value>工具</value></data>
+
+    <data name="Error_Displayed_When_Setting_AutoStart_Failed" xml:space="preserve"><value>设置自动启动注册表项时发生错误：{0}</value></data>
+    <data name="Error_Displayed_When_Saving_Settings_Fails" xml:space="preserve"><value>保存设置时发生意外错误。如果该错误影响使用，请在 NetDrives 项目页面（见“关于”界面）反馈。错误消息：{0}</value></data>
+
+    <data name="Main_ConfiguredConnections_Title" xml:space="preserve">
+  <value>已配置连接</value>
+</data>
+    <data name="Main_UnmanagedConnections_Header" xml:space="preserve">
+  <value>其他网络连接（未在 NetDrives 中配置，可能存在冲突）。右键查看选项...</value>
+</data>
+    <data name="Grid_Column_Name" xml:space="preserve"><value>名称</value></data>
+    <data name="Grid_Column_Drive" xml:space="preserve"><value>盘符</value></data>
+    <data name="Grid_Column_Host" xml:space="preserve"><value>主机</value></data>
+    <data name="Grid_Column_NetworkPath" xml:space="preserve"><value>网络路径</value></data>
+    <data name="Grid_Column_UserLogin" xml:space="preserve"><value>用户登录</value></data>
+    <data name="Grid_Column_Status" xml:space="preserve"><value>状态</value></data>
+
+    <data name="Common_OK" xml:space="preserve"><value>确定</value></data>
+    <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+    <data name="Grid_Action_Connect" xml:space="preserve"><value>连接</value></data>
+    <data name="Grid_Action_Disconnect" xml:space="preserve"><value>断开</value></data>
+
+    <data name="Options_Window_Title" xml:space="preserve"><value>选项</value></data>
+    <data name="Options_AutoStart_Title" xml:space="preserve"><value>自动启动</value></data>
+    <data name="Options_AutoStart_Description" xml:space="preserve"><value>NetDrives 可在你登录 Windows 时自动启动并在后台运行。</value></data>
+    <data name="Options_AutoStart_Checkbox" xml:space="preserve"><value>当我登录 Windows 时自动启动 NetDrives</value></data>
+    <data name="Options_Tray_Title" xml:space="preserve"><value>系统托盘</value></data>
+    <data name="Options_Tray_ShowIcon" xml:space="preserve"><value>在系统托盘显示图标</value></data>
+    <data name="Options_Tray_CloseBehavior" xml:space="preserve"><value>关闭主窗口时在系统托盘继续运行</value></data>
+    <data name="Options_Language_Title" xml:space="preserve"><value>语言</value></data>
+    <data name="Options_Language_Description" xml:space="preserve"><value>保存选项后立即切换显示语言。</value></data>
+
+    <data name="ConnectionError_Title_Format" xml:space="preserve"><value>连接共享“{0}”失败</value></data>
+    <data name="ConnectionError_Question" xml:space="preserve"><value>你希望如何继续：</value></data>
+    <data name="ConnectionError_Action_Retry" xml:space="preserve"><value>重试</value></data>
+    <data name="ConnectionError_Action_Reconfigure" xml:space="preserve"><value>修改该共享配置</value></data>
+    <data name="ConnectionError_Action_ChangeLogin" xml:space="preserve"><value>使用其他用户名/密码登录</value></data>
+
+    <data name="DisconnectionError_Window_Title" xml:space="preserve"><value>断开连接错误</value></data>
+    <data name="DisconnectionError_Title_Format" xml:space="preserve"><value>无法从“{0}”断开连接</value></data>
+    <data name="DisconnectionError_Description" xml:space="preserve"><value>该连接可能正在被占用（例如存在打开的文件）。是否尝试强制断开？请注意这可能导致数据丢失。</value></data>
+    <data name="DisconnectionError_Option_Normal" xml:space="preserve"><value>否，我已关闭打开的文件。请再次正常断开。</value></data>
+    <data name="DisconnectionError_Option_Force" xml:space="preserve"><value>是，强制断开。</value></data>
+
+    <data name="StatusLog_Window_Title" xml:space="preserve"><value>状态日志</value></data>
+    <data name="StatusLog_Title" xml:space="preserve"><value>状态日志</value></data>
+    <data name="StatusLog_Column_Timestamp" xml:space="preserve"><value>时间戳</value></data>
+    <data name="StatusLog_Column_Info" xml:space="preserve"><value>信息</value></data>
+
+    <data name="SysTrayPopup_Title" xml:space="preserve"><value>NetDrives 共享</value></data>
+
+	<data name="ConnectionError_Title_Format" xml:space="preserve"><value>连接共享“{0}”失败</value></data>
+    <data name="ConnectionError_Question" xml:space="preserve"><value>你希望如何继续：</value></data>
+    <data name="ConnectionError_Action_Retry" xml:space="preserve"><value>重试</value></data>
+    <data name="ConnectionError_Action_Reconfigure" xml:space="preserve"><value>修改该共享配置</value></data>
+    <data name="ConnectionError_Action_ChangeLogin" xml:space="preserve"><value>使用其他用户名/密码登录</value></data>
+    <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+    <data name="Grid_Action_Connect" xml:space="preserve"><value>连接</value></data>
+
+	<data name="DisconnectionError_Title_Prefix" xml:space="preserve"><value>无法从“</value></data>
+    <data name="DisconnectionError_Title_Suffix" xml:space="preserve"><value>”断开连接</value></data>
+
+	<!-- 补齐 ShareConfig_*（中文） -->
+    <data name="ShareConfig_WindowTitle" xml:space="preserve"><value>配置共享</value></data>
+    <data name="ShareConfig_ShareSettings" xml:space="preserve"><value>共享设置</value></data>
+    <data name="ShareConfig_SecuritySettings" xml:space="preserve"><value>安全设置</value></data>
+    <data name="ShareConfig_ShareName" xml:space="preserve"><value>共享名称</value></data>
+    <data name="ShareConfig_NetworkAddress" xml:space="preserve"><value>网络地址</value></data>
+    <data name="ShareConfig_DriveLetterOptional" xml:space="preserve"><value>驱动器盘符（可选）</value></data>
+    <data name="ShareConfig_LoginAsUserOptional" xml:space="preserve"><value>以用户身份登录（可选）</value></data>
+    <data name="ShareConfig_AutoConnectAtStartup" xml:space="preserve"><value>启动时自动连接</value></data>
+    <data name="ShareConfig_Password" xml:space="preserve"><value>密码</value></data>
+    <data name="ShareConfig_PasswordConfirmation" xml:space="preserve"><value>确认密码</value></data>
+
+	<data name="ShareOrganizer_Window_Title" xml:space="preserve"><value>整理共享</value></data>
+    <data name="ShareOrganizer_Title" xml:space="preserve"><value>整理你的共享</value></data>
+    <data name="ShareOrganizer_Instruction_1" xml:space="preserve"><value>1：要调整顺序，请将共享拖放到列表中的目标位置。</value></data>
+    <data name="ShareOrganizer_Instruction_2" xml:space="preserve"><value>2：你可以直接在表格中修改共享名称。</value></data>
+
+    <data name="ShareConfig_LoginMode_Auto" xml:space="preserve"><value>使用以下密码自动登录：</value></data>
+    <data name="ShareConfig_LoginMode_Prompt" xml:space="preserve"><value>连接时提示我输入密码</value></data>
+    <data name="ShareConfig_LoginMode_None" xml:space="preserve"><value>此共享不需要密码</value></data>
+</root>

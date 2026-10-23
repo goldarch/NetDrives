@@ -1,0 +1,35 @@
+﻿<Window x:Class="Hardcodet.NetDrives.UI.Connections.LoginDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions"
+    Title="{Binding Path=Name, StringFormat={ext:Resource Connection_Dialog_Title}}"
+     Height="204" Width="400" Style="{DynamicResource DialogWindow}" WindowStartupLocation="CenterOwner" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" ShowInTaskbar="False" AllowsTransparency="False" Icon="..\..\Shared\Images\LoginSmall.png">
+    <Grid>
+        
+    	<TextBlock Margin="10,14,72,0" Style="{DynamicResource TitleLabel}" VerticalAlignment="Top" Height="Auto" TextWrapping="Wrap" HorizontalAlignment="Left" Text="{ext:Resource LoginDialog_TitleText}"/>
+    	<TextBlock Margin="10,66,0,0" VerticalAlignment="Top" Height="23" TextWrapping="Wrap" HorizontalAlignment="Left" Style="{DynamicResource DefaultLabel}" Width="Auto" Text="{ext:Resource LoginDialog_UserName}"/>
+    	<TextBlock Margin="10,99,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="Auto" Style="{DynamicResource DefaultLabel}" VerticalAlignment="Top" Height="23" Text="{ext:Resource LoginDialog_Password}"/>
+    	<TextBox x:Name="txtUserName" Margin="167,66,10,0" VerticalAlignment="Top" Height="23" Text="" TextWrapping="Wrap" TabIndex="1"/>
+    	<Button
+    		x:Name="btnCancel"
+    		Click="btnCancel_Click"
+    		HorizontalAlignment="Right"
+    		Margin="0,0,10,12.32"
+    		Width="90"
+    		Content="{ext:Resource Common_Cancel}"
+    		VerticalAlignment="Bottom"
+    		Height="21.68" TabIndex="4"
+      />
+    	<Button
+    		x:Name="btnOk"
+    		Click="btnOk_Click"
+    		Margin="194,0,110,12.32"
+    		Content="{ext:Resource Common_OK}"
+    		VerticalAlignment="Bottom"
+    		Height="21.68"
+    		IsDefault="True" Width="90" TabIndex="3" />
+    	<PasswordBox x:Name="txtPassword" Margin="167,99,10,0" VerticalAlignment="Top" Height="23" TabIndex="2"/>
+    	<Image HorizontalAlignment="Right" Margin="0,10,0,0" Width="72" Source="..\..\Shared\Images\Login.png" Stretch="Fill" Height="72" VerticalAlignment="Top" Opacity="0.735"/>
+        
+    </Grid>
+</Window>

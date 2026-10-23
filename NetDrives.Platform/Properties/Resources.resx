@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConnectResult_BadDevice" xml:space="preserve">
+    <value>Error code 1200: The value specified by lpLocalName is invalid.</value>
+  </data>
+  <data name="ConnectResult_BadDeviceType" xml:space="preserve">
+    <value>Error code 66: The type of local device and the type of network resource do not match.</value>
+  </data>
+  <data name="ConnectResult_BadProfile" xml:space="preserve">
+    <value>Error code 1206: The user profile is in an incorrect format.</value>
+  </data>
+  <data name="ConnectResult_BadProvider" xml:space="preserve">
+    <value>Error code 1204: The value specified by the lpProvider member does not match any provider.</value>
+  </data>
+  <data name="ConnectResult_BadUserNameFormat" xml:space="preserve">
+    <value>Error code 2202: The specified user name was invalid (invalid format). Please check your configuration.</value>
+  </data>
+  <data name="ConnectResult_Cancelled" xml:space="preserve">
+    <value>Error code 1223: The attempt to make the connection was canceled by the user through a dialog box from one of the network resource providers, or by a called resource.</value>
+  </data>
+  <data name="ConnectResult_CannotOpenProfile" xml:space="preserve">
+    <value>Error code 1205: The system is unable to open the user profile to process persistent connections.</value>
+  </data>
+  <data name="ConnectResult_Degraded" xml:space="preserve">
+    <value>Error code -3: The operating system declared the connection as degraded, which means that it might still be functional or recover on its own.</value>
+  </data>
+  <data name="ConnectResult_DriveLetterAlreadyAssigned" xml:space="preserve">
+    <value>Error code 85: The specified drive letter is already reserved. (Internal message: Local device specified by the lpLocalName member is already connected to a network resource.)</value>
+  </data>
+  <data name="ConnectResult_DriveLetterAlreadyRegistered" xml:space="preserve">
+    <value>Error code 1202: The requested drive letter is already registered for another connection.</value>
+  </data>
+  <data name="ConnectResult_ExtendedError" xml:space="preserve">
+    <value>Error code 1208: A network-specific error occurred. The application did not retrieve any further information.</value>
+  </data>
+  <data name="ConnectResult_GeneralNetworkFailure" xml:space="preserve">
+    <value>Error code 31: A device attached to the system is not functioning.</value>
+  </data>
+  <data name="ConnectResult_HostNotFound" xml:space="preserve">
+    <value>Error code 53: The server (host) address could not be resolved. Please check your configuration.</value>
+  </data>
+  <data name="ConnectResult_InvalidCredentials" xml:space="preserve">
+    <value>Error code 86: The specified password is invalid and the CONNECT_INTERACTIVE flag is not set. This error can also happen in case of an invalid user ID if a standard UNC connection is made.</value>
+  </data>
+  <data name="ConnectResult_InvalidNetworkAddressFormat" xml:space="preserve">
+    <value>Error code 67: The value specified by the lpRemoteName member is not acceptable to any network resource provider, either because the resource name is invalid, or because the named resource cannot be located.</value>
+  </data>
+  <data name="ConnectResult_InvalidServerOperation" xml:space="preserve">
+    <value>Error code 58: The specified server cannot perform the requested operation.</value>
+  </data>
+  <data name="ConnectResult_LoginFailure" xml:space="preserve">
+    <value>Error code 1326: Login failure - unknown user name or bad password.</value>
+  </data>
+  <data name="ConnectResult_Lost" xml:space="preserve">
+    <value>Error code -1: The connection was lost after having established it properly. No further information  is available.</value>
+  </data>
+  <data name="ConnectResult_NetworkBusy" xml:space="preserve">
+    <value>Error code 170: The router or provider is busy, possibly initializing. A reconnection attempt is recommended.</value>
+  </data>
+  <data name="ConnectResult_NetworkUnavailable" xml:space="preserve">
+    <value>Error code 1222: The network is unavailable.</value>
+  </data>
+  <data name="ConnectResult_NoNetworkOrInvalidNetworkAddress" xml:space="preserve">
+    <value>Error code 1203: The operation cannot be performed because a network component is not started or because a specified name cannot be used.</value>
+  </data>
+  <data name="ConnectResult_SessionCredentialConflict" xml:space="preserve">
+    <value>Error code 1219: Multiple connections to a server or shared resource by the same user, using more than one user name, are not allowed. Disconnect other connections to the server / share that use a different login and try again.</value>
+  </data>
+  <data name="ConnectResult_ShareNotFound" xml:space="preserve">
+    <value>Error code 55: The specified share was not found. Please check your configuration.</value>
+  </data>
+  <data name="ConnectResult_Success" xml:space="preserve">
+    <value>The connection was successfully created.</value>
+  </data>
+  <data name="ConnectResult_UnknownConnectionFailure" xml:space="preserve">
+    <value>Error code -2: An unexpected network failure occurred - there is no further information available.</value>
+  </data>
+  <data name="ConnectResult_UnknownUserOrAccessDenied" xml:space="preserve">
+    <value>Error code 52: The submitted user ID is unknown, or the caller does not have access to the network resource.</value>
+  </data>
+  <data name="ConnectResult_UserNotAuthenticated" xml:space="preserve">
+    <value>Error code 1244: The operation being requested was not performed because the user has not been authenticated.</value>
+  </data>
+  <data name="Error_Message_Logged_If_Password_Decryption_Failed" xml:space="preserve">
+    <value>An exception occurred when trying to decrypt stored password of share '{0}'.</value>
+  </data>
+</root>

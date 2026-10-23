@@ -1,0 +1,95 @@
+﻿<Popup
+  x:Class="Hardcodet.NetDrives.UI.SystemTray.SysTrayPopup"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit"
+  xmlns:Converters="clr-namespace:Hardcodet.NetDrives.Shared.Converters;assembly="
+  xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions"
+  StaysOpen="False"
+  AllowsTransparency="True"
+  Placement="Mouse"
+  PopupAnimation="Fade"
+  VerticalOffset="-2">
+
+
+  <Grid
+    MinHeight="60">
+    <Border
+      HorizontalAlignment="Stretch"
+      CornerRadius="6,6,6,6"
+      Background="{DynamicResource DialogBackgroundBrush}"
+      Margin="5,5,5,5"
+      BorderThickness="0,0,0,0">
+      <Border.Effect>
+        <DropShadowEffect
+          Color="#FF6A6A6A" />
+      </Border.Effect>
+    </Border>
+    <dg:DataGrid
+      ItemsSource="{Binding Path=ShareManager.Shares}"
+      SelectedItem="{Binding Path=ActiveShare}"
+      CanUserSortColumns="False"
+      CanUserResizeColumns="False"
+      MouseDoubleClick="OnDoubleClick"
+      RowStyle="{StaticResource TrayConnectionsGridRow}"
+      RowHeight="20"
+      Margin="10,40,10,20"
+      IsSynchronizedWithCurrentItem="True"
+      VerticalAlignment="Stretch"
+      Width="300"
+      Background="{x:Null}">
+
+      <dg:DataGrid.Columns>
+
+        <!-- Status -->
+        <dg:DataGridTemplateColumn
+          Header=""
+          SortMemberPath="Status"
+          IsReadOnly="True"
+          Width="30">
+
+          <dg:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image
+                Width="16"
+                Height="16"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Source="{Binding Path=Status, Converter={Converters:ConnectionStatusToImageConverter}}" />
+            </DataTemplate>
+          </dg:DataGridTemplateColumn.CellTemplate>
+        </dg:DataGridTemplateColumn>
+
+
+        <!-- Name -->
+        <dg:DataGridTextColumn
+          IsReadOnly="True"
+          Header="{ext:Resource Grid_Column_Name}"
+          Width="*"
+          FontWeight="Bold"
+          MinWidth="100"
+          Binding="{Binding Path=Configuration.Name}" />
+
+      </dg:DataGrid.Columns>
+    </dg:DataGrid>
+    <TextBlock
+      HorizontalAlignment="Center"
+      Margin="10,15,0,0"
+      Style="{DynamicResource TitleLabel}"
+      VerticalAlignment="Top"
+      TextWrapping="Wrap"><Run
+        Text="{ext:Resource SysTrayPopup_Title}"
+        Language="de-ch" /></TextBlock>
+    <Image
+      HorizontalAlignment="Right"
+      Margin="0,15,15,0"
+      Width="34.136"
+      Source="..\..\Shared\Images\NetDrivesMedium.png"
+      Stretch="Fill"
+      Opacity="0.66"
+      Height="34.136"
+      VerticalAlignment="Top"
+      RenderTransformOrigin="6.65,0.439" />
+
+  </Grid>
+</Popup>

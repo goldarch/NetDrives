@@ -1,0 +1,380 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:TaskbarNotification="clr-namespace:Hardcodet.Wpf.TaskbarNotification;assembly=Hardcodet.Wpf.TaskbarNotification"
+  xmlns:Converters="clr-namespace:Hardcodet.NetDrives.Shared.Converters"
+  xmlns:SystemTray="clr-namespace:Hardcodet.NetDrives.UI.SystemTray"
+  xmlns:cmd="clr-namespace:Hardcodet.NetDrives.Shared.Commands"
+  xmlns:ext="clr-namespace:Hardcodet.NetDrives.Shared.MarkupExtensions"
+  xmlns:igRibbon="http://infragistics.com/Ribbon">
+
+
+  <!-- Main window ribbon -->
+  <igRibbon:XamRibbon x:Key="MainMenu" x:Shared="False"
+    HorizontalAlignment="Stretch">
+    <igRibbon:XamRibbon.QuickAccessToolbar>
+      <igRibbon:QuickAccessToolbar
+        Visibility="Collapsed" />
+    </igRibbon:XamRibbon.QuickAccessToolbar>
+    <igRibbon:XamRibbon.ApplicationMenu>
+      <igRibbon:ApplicationMenu 
+        Image="/Shared/Images/Menus/AppMenuBig.png">
+
+        <igRibbon:ButtonTool
+          Command="{cmd:ApplicationCommand}"
+          CommandParameter="Minimize"
+          Caption="{ext:Resource Menu_MinimizeToTray_Title}"
+          LargeImage="/Shared/Images/Menus/MinimizeBig.png"
+          SmallImage="/Shared/Images/Menus/MinimizeSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          ToolTip="{ext:RibbonInfo Menu_MinimizeToTray_ToolTip_Title, Menu_MinimizeToTray_ToolTip_Description}" />
+
+        <igRibbon:ButtonTool
+          Command="{cmd:ApplicationCommand}"
+          CommandParameter="Close"
+          Caption="{ext:Resource Menu_Exit_Title}"
+          LargeImage="/Shared/Images/Menus/ExitBig.png"
+          SmallImage="/Shared/Images/Menus/ExitSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          ToolTip="{ext:RibbonInfo Menu_Exit_ToolTip_Title, Menu_Exit_ToolTip_Description}" />
+        
+      </igRibbon:ApplicationMenu>
+    </igRibbon:XamRibbon.ApplicationMenu>
+    <igRibbon:RibbonTabItem
+      Header="{ext:Resource Menu_Tab_Shares}"
+      IsSelected="False">
+      <igRibbon:RibbonGroup
+        Caption="{ext:Resource Menu_Group_Shares}">
+        <igRibbon:ButtonTool
+          Command="{cmd:AddNetLocationCommand}"
+          Caption="{ext:Resource Menu_AddConnection_Title}"
+          LargeImage="/Shared/Images/Menus/AddConnectionBig.png"
+          SmallImage="/Shared/Images/Menus/AddConnectionSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          ToolTip="{ext:RibbonInfo Menu_AddConnection_ToolTip_Title, Menu_AddConnection_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_RemoveConnection_Title}"
+          LargeImage="/Shared/Images/Menus/RemoveConnectionBig.png"
+          SmallImage="/Shared/Images/Menus/RemoveConnectionSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:RemoveNetLocationCommand}"
+          ToolTip="{ext:RibbonInfo Menu_RemoveConnection_ToolTip_Title, Menu_RemoveConnection_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Command="{cmd:EditNetLocationCommand}"
+          Caption="{ext:Resource Menu_EditConnection_Title}"
+          LargeImage="/Shared/Images/Menus/EditConnectionBig.png"
+          SmallImage="/Shared/Images/Menus/EditConnectionSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          ToolTip="{ext:RibbonInfo Menu_EditConnection_ToolTip_Title, Menu_EditConnection_ToolTip_Description}" />
+      </igRibbon:RibbonGroup>
+      <igRibbon:RibbonGroup
+        Caption="{ext:Resource Menu_Group_Connections}">
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_Connect_Title}"
+          LargeImage="/Shared/Images/Menus/ConnectBig.png"
+          SmallImage="/Shared/Images/Menus/ConnectSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ConnectionActionCommand}"
+          CommandParameter="Connect"
+          ToolTip="{ext:RibbonInfo Menu_Connect_ToolTip_Title, Menu_Connect_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_Disconnect_Title}"
+          LargeImage="/Shared/Images/Menus/DisconnectBig.png"
+          SmallImage="/Shared/Images/Menus/DisconnectSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ConnectionActionCommand}"
+          CommandParameter="Disconnect"
+          ToolTip="{ext:RibbonInfo Menu_Disconnect_ToolTip_Title, Menu_Disconnect_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_Browse_Title}"
+          LargeImage="/Shared/Images/Menus/BrowseLocationBig.png"
+          SmallImage="/Shared/Images/Menus/BrowseLocationSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ConnectionActionCommand}"
+          CommandParameter="Browse"
+          ToolTip="{ext:RibbonInfo Menu_Browse_ToolTip_Title, Menu_Browse_ToolTip_Description}" />
+      </igRibbon:RibbonGroup>
+    </igRibbon:RibbonTabItem>
+    <igRibbon:RibbonTabItem
+      Header="{ext:Resource Menu_Tab_Tools}"
+      IsSelected="True">
+      <igRibbon:RibbonGroup
+        Caption="{ext:Resource Menu_Group_Tools}">
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_OrganizeShares_Title}"
+          LargeImage="/Shared/Images/Menus/OrganizeSharesBig.png"
+          SmallImage="/Shared/Images/Menus/OrganizeSharesSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ShowHelperDialogsCommand}"
+          CommandParameter="OrganizeShares"
+          ToolTip="{ext:RibbonInfo Menu_OrganizeShares_ToolTip_Title, Menu_OrganizeShares_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_Options_Title}"
+          LargeImage="/Shared/Images/Menus/OptionsBig.png"
+          SmallImage="/Shared/Images/Menus/OptionsSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ShowHelperDialogsCommand}"
+          CommandParameter="Options"
+          ToolTip="{ext:RibbonInfo Menu_Options_ToolTip_Title, Menu_Options_ToolTip_Description}" />
+      </igRibbon:RibbonGroup>
+      <igRibbon:RibbonGroup
+        Caption="{ext:Resource Menu_Group_Diagnose}">
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_ConnectionLog_Title}"
+          LargeImage="/Shared/Images/Menus/ShowStatusLogBig.png"
+          SmallImage="/Shared/Images/Menus/ShowStatusLogSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ShowShareLogCommand}"
+          ToolTip="{ext:RibbonInfo Menu_ConnectionLog_ToolTip_Title, Menu_ConnectionLog_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_ApplicationLog_Title}"
+          LargeImage="/Shared/Images/Menus/ShowApplicationLogBig.png"
+          SmallImage="/Shared/Images/Menus/ShowApplicationLogSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextNormal"
+          Command="{cmd:ProcessCommand}"
+          CommandParameter="ShowApplicationLog"
+          ToolTip="{ext:RibbonInfo Menu_ApplicationLog_ToolTip_Title, Menu_ApplicationLog_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_ListConnections_Title}"
+          LargeImage="/Shared/Images/Menus/ListSharesOnConsoleBig.png"
+          SmallImage="/Shared/Images/Menus/ListSharesOnConsoleSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextNormal"
+          Command="{cmd:ProcessCommand}"
+          CommandParameter="ConsoleListConnections"
+          ToolTip="{ext:RibbonInfo Menu_ListConnections_ToolTip_Title, Menu_ListConnections_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_ClearConnections_Title}"
+          LargeImage="/Shared/Images/Menus/RemoveSharesViaConsoleBig.png"
+          SmallImage="/Shared/Images/Menus/RemoveSharesViaConsoleSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextNormal"
+          Command="{cmd:ProcessCommand}"
+          CommandParameter="ConsoleClearConnections"
+          ToolTip="{ext:RibbonInfo Menu_ClearConnections_ToolTip_Title, Menu_ClearConnections_ToolTip_Description}" />
+      </igRibbon:RibbonGroup>
+    </igRibbon:RibbonTabItem>
+    <igRibbon:RibbonTabItem
+      Header="{ext:Resource Menu_Tab_Help}"
+      IsSelected="True">
+      <igRibbon:RibbonGroup>
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_CheckForUpdates_Title}"
+          LargeImage="/Shared/Images/Menus/CheckForUpdateBig.png"
+          SmallImage="/Shared/Images/Menus/CheckForUpdateSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ShowHelperDialogsCommand}"
+          CommandParameter="CheckForUpdate"
+          ToolTip="{ext:RibbonInfo Menu_CheckForUpdates_ToolTip_Title, Menu_CheckForUpdates_ToolTip_Description}" />
+        <igRibbon:ButtonTool
+          Caption="{ext:Resource Menu_About_Title}"
+          LargeImage="/Shared/Images/Menus/AboutBig.png"
+          SmallImage="/Shared/Images/Menus/AboutSmall.png"
+          igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge"
+          Command="{cmd:ShowHelperDialogsCommand}"
+          CommandParameter="About"
+          ToolTip="{ext:RibbonInfo Menu_About_Title, Menu_About_ToolTip_Title}" />
+      </igRibbon:RibbonGroup>
+    </igRibbon:RibbonTabItem>
+  </igRibbon:XamRibbon>
+
+
+  <!-- context menu for configured shares -->
+  <ContextMenu
+    x:Key="ManagedConnectionsContextMenu">
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Connect}"
+      Command="{cmd:ConnectionActionCommand}"
+      CommandParameter="Connect"
+      >
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/ConnectSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Disconnect}"
+      Command="{cmd:ConnectionActionCommand}"
+      CommandParameter="Disconnect">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/DisconnectSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Browse}"
+      Command="{cmd:ConnectionActionCommand}"
+      CommandParameter="Browse">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/BrowseLocationSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <Separator />
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Edit}"
+      Command="{cmd:EditNetLocationCommand}">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/EditConnectionSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Remove}"
+      Command="{cmd:RemoveNetLocationCommand}">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/RemoveConnectionSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <Separator />
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_ConnectionLog}"
+      Command="{cmd:ShowShareLogCommand}"
+      CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}},
+                         Path=PlacementTarget}">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/ShowStatusLogSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+    
+  </ContextMenu>
+
+  
+
+  <!-- context menu for connections of the systray popup-->
+  <ContextMenu
+    x:Key="TrayConnectionsContextMenu">
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Connect}"
+      Command="{cmd:ConnectionActionCommand}"
+      CommandParameter="Connect">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/ConnectSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Disconnect}"
+      Command="{cmd:ConnectionActionCommand}"
+      CommandParameter="Disconnect">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/DisconnectSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Browse}"
+      Command="{cmd:ConnectionActionCommand}"
+      CommandParameter="Browse">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/BrowseLocationSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+  </ContextMenu>
+
+  <!-- context menu for unconfigured system connections -->
+  <ContextMenu
+    x:Key="SystemConnectionsContextMenu">
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_CreateConfiguration}"
+      Command="{cmd:CreateManagedConnectionCommand}"
+      CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}},
+                         Path=PlacementTarget}">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/AddConnectionSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+    <Separator />
+
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_CloseConnection}"
+      Command="{cmd:CloseUnmanagedConnectionCommand}"
+      CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}},
+                         Path=PlacementTarget}">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/DisconnectSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+  </ContextMenu>
+
+
+  <ContextMenu
+    x:Key="SystemTrayMenu">
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_OpenMainWindow}"
+      Command="{cmd:ApplicationCommand}"
+      CommandParameter="Open"
+      >
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/OpenSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+
+    <MenuItem
+      Header="{ext:Resource Context_Menu_Quit}"
+      Command="{cmd:ApplicationCommand}"
+      CommandParameter="Quit">
+      <MenuItem.Icon>
+        <Image
+          Style="{StaticResource MenuIcon}"
+          Source="/Shared/Images/Menus/ExitSmall.png" />
+      </MenuItem.Icon>
+    </MenuItem>
+    
+  </ContextMenu>
+
+  
+  
+  <!-- the taskbar icon  -->
+  <TaskbarNotification:TaskbarIcon
+    x:Key="TrayIcon"
+    x:Shared="False"
+    ToolTipText="{ext:Resource ApplicationName}"
+    DoubleClickCommand="{cmd:ApplicationCommand}"
+    DoubleClickCommandParameter="Open"
+    ContextMenu="{StaticResource SystemTrayMenu}"
+    MenuActivation="RightClick"
+    IconSource="{Binding Path=ShareManager.SummaryStatus, Converter={Converters:SummaryStatusConverter}, ConverterParameter=TrayIcon}">
+    
+    <TaskbarNotification:TaskbarIcon.TrayPopup>
+      <SystemTray:SysTrayPopup />
+    </TaskbarNotification:TaskbarIcon.TrayPopup>
+    
+    <TaskbarNotification:TaskbarIcon.TrayToolTip>
+      <SystemTray:SysTrayToolTip />
+    </TaskbarNotification:TaskbarIcon.TrayToolTip>
+    
+  </TaskbarNotification:TaskbarIcon>
+
+</ResourceDictionary>
